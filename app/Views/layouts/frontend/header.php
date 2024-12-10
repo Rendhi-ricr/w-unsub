@@ -39,14 +39,14 @@
         </div>
         <nav class="navbar">
             <ul class="menu">
-            <li><a href="<?= base_url('frontend/home'); ?>" class="#">Home</a></li>
+            <li><a href="<?= base_url('users/home'); ?>" class="#">Home</a></li>
                 <li class="has-dropdown">
                     <a href="#">Tentang Kami</a>
                     <ul class="submenu">
-                        <li><a href="<?= base_url('frontend/sejarah'); ?>">Sejarah</a></li>
-                        <li><a href="<?= base_url('frontend/visi_misi'); ?>">Visi & Misi</a></li>
-                        <li><a href="<?= base_url('frontend/sambutan');?>">Sambutan Rektor</a></li>
-                        <li><a href="<?= base_url('frontend/fasilitas');?>">Fasilitas</a></li>
+                        <li><a href="<?= base_url('users/sejarah'); ?>">Sejarah</a></li>
+                        <li><a href="<?= base_url('users/visi_misi'); ?>">Visi & Misi</a></li>
+                        <li><a href="<?= base_url('users/sambutan');?>">Sambutan Rektor</a></li>
+                        <li><a href="<?= base_url('users/fasilitas');?>">Fasilitas</a></li>
                     </ul>
                 </li>
                 <li class="has-dropdown">

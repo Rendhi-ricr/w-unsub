@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Frontend;
+namespace App\Controllers\users;
 
 use App\Controllers\BaseController;
 
@@ -8,6 +8,6 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('frontend/home'); // Path relatif dari Views folder
+        return view('users/home'); 
     }
 }

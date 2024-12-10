@@ -1,13 +1,16 @@
 <?= $this->extend('layouts/frontend/template'); ?>
 
 <?= $this->section('title'); ?>
-Fasilitas
+Sejarah
 <?= $this->endSection(); ?>
 
 <?= $this->section('css'); ?>
-<link rel="stylesheet" href="/public/css/sejarah.css">
+<link href="<?= base_url('assets/css/frontend/sejarah.css'); ?>" rel="stylesheet">
+
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
-<h1> ISI FASILITAS</h1>
+
+
+
 <?= $this->endSection(); ?>
