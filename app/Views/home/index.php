@@ -5,12 +5,13 @@ Home
 <?= $this->endSection(); ?>
 <?= $this->section('content'); ?>
     <!-- Hero Section -->
-    <div class="hero">
-        <h1>Selamat Datang Di</h1>
-        <h1>Universitas Subang</h1>
-        <p>School Of Empowering People</p>
-        <img src="<?=base_url('foto/kampus_merdeka.png');?>" alt="Kampus Merdeka Logo">
-    </div>
+    <div class="hero" style="background-image: url('<?= base_url('foto/banner.png'); ?>'); background-size: cover; background-position: center; height: 250px; color: white; text-align: center;">
+    <h1>Selamat Datang Di</h1>
+    <h1>Universitas Subang</h1>
+    <p>School Of Empowering People</p>
+    <img src="<?=base_url('foto/kampus_merdeka.png');?>" alt="Kampus Merdeka Logo">
+</div>
+
 <!-- About Section -->
 <div class="about">
         <div class="about-container">
