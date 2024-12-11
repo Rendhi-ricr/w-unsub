@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/header.css" rel="stylesheet">
+    <link href="assets/css/frontend/header.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css">
-    <link href="<?= base_url('css/header.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/frontend/sejarah.css'); ?>" rel="stylesheet">
 
 
     <title>Universitas Subang</title>
@@ -39,26 +39,25 @@
         </div>
         <nav class="navbar">
             <ul class="menu">
-            <li><a href="<?= base_url('pengunjung/home'); ?>" class="#">Home</a></li>
+            <li><a href="<?= base_url('users/home'); ?>" class="#">Home</a></li>
                 <li class="has-dropdown">
                     <a href="#">Tentang Kami</a>
                     <ul class="submenu">
-                        <li><a href="<?= base_url('pengunjung/sejarah'); ?>">Sejarah</a></li>
-                        <li><a href="<?= base_url('pengunjung/visi_misi'); ?>">Visi & Misi</a></li>
-                        <li><a href="<?= base_url('pengunjung/sambutan');?>">Sambutan Rektor</a></li>
-                        <li><a href="<?= base_url('pengunjung/fasilitas');?>">Fasilitas</a></li>
+                        <li><a href="<?= base_url('users/sejarah'); ?>">Sejarah</a></li>
+                        <li><a href="<?= base_url('users/visi_misi'); ?>">Visi & Misi</a></li>
+                        <li><a href="<?= base_url('users/sambutan');?>">Sambutan Rektor</a></li>
+                        <li><a href="<?= base_url('users/fasilitas');?>">Fasilitas</a></li>
                     </ul>
                 </li>
                 <li class="has-dropdown">
                     <a href="#">Akademik</a>
                     <ul class="submenu">
-                        <li><a href="#fakultas">Fakultas</a></li>
-                        <li><a href="#beasiswa">Beasiswa</a></li>
-                        <li><a href="#kalender-akademik">Kalender Akademik</a></li>
+                    <li><a href="<?= base_url('users/fakultas'); ?>">Fakultas</a></li>
+                    <li><a href="<?= base_url('users/beasiswa'); ?>">Beasiswa</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#kontak">Kontak</a>
+                <li><a href="<?= base_url('users/kontak'); ?>">Kontak</a></li>
                 </li>
             </ul>
         </nav>
