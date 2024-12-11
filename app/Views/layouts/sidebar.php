@@ -61,6 +61,11 @@
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Kontak</span>
                 </a>
             </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="<?= base_url('admin/VisitorController') ?>">
+                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Statistik Pengunjung</span>
+                </a>
+            </li>
 
 
 
