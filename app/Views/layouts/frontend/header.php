@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/header.css" rel="stylesheet">
+    <link href="assets/css/frontend/header.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css">
-    <link href="<?= base_url('assets/css/sejarah.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/frontend/sejarah.css'); ?>" rel="stylesheet">
 
 
     <title>Universitas Subang</title>
@@ -52,13 +52,12 @@
                 <li class="has-dropdown">
                     <a href="#">Akademik</a>
                     <ul class="submenu">
-                        <li><a href="#fakultas">Fakultas</a></li>
-                        <li><a href="#beasiswa">Beasiswa</a></li>
-                        <li><a href="#kalender-akademik">Kalender Akademik</a></li>
+                    <li><a href="<?= base_url('users/fakultas'); ?>">Fakultas</a></li>
+                    <li><a href="<?= base_url('users/beasiswa'); ?>">Beasiswa</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#kontak">Kontak</a>
+                <li><a href="<?= base_url('users/kontak'); ?>">Kontak</a></li>
                 </li>
             </ul>
         </nav>

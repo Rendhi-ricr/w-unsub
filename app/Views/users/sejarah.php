@@ -5,7 +5,7 @@ Sejarah
 <?= $this->endSection(); ?>
 
 <?= $this->section('css'); ?>
-<link href="<?= base_url('assets/css/sejarah.css'); ?>" rel="stylesheet">
+<link href="<?= base_url('assets/css/frontend/sejarah.css'); ?>" rel="stylesheet">
 
 <?= $this->endSection(); ?>
 

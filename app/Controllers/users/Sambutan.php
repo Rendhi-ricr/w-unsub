@@ -4,7 +4,7 @@ namespace App\Controllers\users;
 
 use App\Controllers\BaseController;
 
-class Home extends BaseController
+class Sambutan extends BaseController
 {
     public function index()
     {

@@ -5,7 +5,7 @@ Visi & Misi
 <?= $this->endSection(); ?>
 
 <?= $this->section('css'); ?>
-<link href="<?= base_url('assets/css/visi_misi.css'); ?>" rel="stylesheet">
+<link href="<?= base_url('assets/css/frontend/visi_misi.css'); ?>" rel="stylesheet">
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
