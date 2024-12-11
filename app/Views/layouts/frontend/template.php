@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/home.css" rel="stylesheet">
+    <link href="assets/css/home.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/sb-admin-2.min.css">
     <?= $this->renderSection('css'); ?> <!-- Memasukkan file CSS khusus jika ada -->
     <link href="/css/sejarah.css" rel="stylesheet">
