@@ -45,6 +45,7 @@ class VisitorController extends BaseController
         // Eksekusi query
         $data = $query->findAll();
 
+
         // Kirim data ke view
         return view('admin/statistics', ['data' => $data]);
     }
