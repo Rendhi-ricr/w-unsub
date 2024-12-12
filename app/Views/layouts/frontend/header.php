@@ -25,7 +25,6 @@
             <a href="#" class="dropdown-link">Alumni</a>
             <ul class="submenu">
                 <li><a href="#tracer-study">Tracer Study</a></li>
-                <li><a href="#tracer-study">Career Center</a></li>
             </ul>
         </div>
     </div>
@@ -47,10 +46,13 @@
                         <li><a href="<?= base_url('users/visi_misi'); ?>">Visi & Misi</a></li>
                         <li><a href="<?= base_url('users/sambutan');?>">Sambutan Rektor</a></li>
                         <li><a href="<?= base_url('users/fasilitas');?>">Fasilitas</a></li>
+                        <li><a href="<?= base_url('users/dokumen');?>">Dokumen Akreditasi</a></li>
+                        <li><a href="<?= base_url('users/ukm');?>">UKM</a></li>
+
                     </ul>
                 </li>
                 <li class="has-dropdown">
-                    <a href="#">Akademik</a>
+                    <a href="#">Akademik & kemahasiswaan</a>
                     <ul class="submenu">
                     <li><a href="<?= base_url('users/fakultas'); ?>">Fakultas</a></li>
                     <li><a href="<?= base_url('users/beasiswa'); ?>">Beasiswa</a></li>

@@ -30,12 +30,12 @@
             </li> -->
             <li class="sidebar-header">
                 Akademik
-            </li>
+            <!-- </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="">
                     <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Data Kalender Akademik</span>
                 </a>
-            </li>
+            </li> -->
             <li class="sidebar-item">
                 <a class="sidebar-link" href="<?= base_url('admin/ukm') ?>">
                     <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Data UKM</span>
