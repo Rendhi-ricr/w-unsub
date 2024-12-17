@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universitas Subang</title>
 
-    <!-- CSS Utama -->
     <link href="assets/css/home.css" rel="stylesheet">
     <link href="<?= base_url('assets/css/frontend/home.css'); ?>" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/sb-admin-2.min.css">
-
-    <!-- CSS Dinamis -->
     <?= $this->renderSection('css'); ?>
-
-    <!-- CSS Tambahan -->
     <link href="<?= base_url('assets/css/frontend/sejarah.css'); ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/frontend/visi_misi.css'); ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/frontend/sambutan.css'); ?>" rel="stylesheet">
