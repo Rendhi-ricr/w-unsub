@@ -36,6 +36,22 @@
 
     <script src="<?= base_url() ?>assets/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#gambar').change(function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#preview').attr('src', e.target.result).removeClass('d-none');
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    $('#preview').addClass('d-none').attr('src', '');
+                }
+            });
+        });
+    </script>
 
 
 

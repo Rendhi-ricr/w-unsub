@@ -8,6 +8,6 @@ class Kerjasama extends BaseController
 {
     public function index()
     {
-        return view('kerjasama/index');
+        return view('admin/kerjasama/index');
     }
 }

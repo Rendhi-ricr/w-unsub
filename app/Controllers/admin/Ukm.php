@@ -8,6 +8,6 @@ class Ukm extends BaseController
 {
     public function index()
     {
-        return view('ukm/index');
+        return view('admin/ukm/index');
     }
 }

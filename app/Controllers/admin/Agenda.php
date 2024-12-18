@@ -8,6 +8,6 @@ class Agenda extends BaseController
 {
     public function index()
     {
-        return view('agenda/index');
+        return view('admin/agenda/index');
     }
 }
