@@ -39,7 +39,7 @@
                                 <tbody>
                                     <tr>
                                         <td><?= $no++; ?></td>
-                                        <td><img src="<?= base_url('foto/fasilitas/' . $f['gambar']) ?>" alt="Toyota Avanza" style="width: 200px; heigh:10px;"></td>
+                                        <td><img src="<?= base_url('foto/fasilitas/' . $f['gambar']) ?>" alt="Fasilitas" style="width: 200px; heigh:10px;"></td>
                                         <td><?= $f['nama_fasilitas']; ?></td>
                                         <td><?= $f['deskripsi']; ?></td>
                                         <td>
