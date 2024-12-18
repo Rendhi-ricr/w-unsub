@@ -23,6 +23,11 @@
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Data Kerjasama</span>
                 </a>
             </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="<?= base_url('admin/dokumen') ?>">
+                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle"> Data Dokumen Akreditasi</span>
+                </a>
+            </li>
             <!-- <li class="sidebar-item">
                 <a class="sidebar-link" href="">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Dokumen Akreditasi</span>
@@ -30,7 +35,7 @@
             </li> -->
             <li class="sidebar-header">
                 Akademik
-            <!-- </li>
+                <!-- </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="">
                     <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Data Kalender Akademik</span>
@@ -66,13 +71,6 @@
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Statistik Pengunjung</span>
                 </a>
             </li>
-
-
-
-            <li class="sidebar-header">
-                Plugins & Addons
-            </li>
-
         </ul>
 
 
