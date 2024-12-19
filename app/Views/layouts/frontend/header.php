@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Universitas Subang</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* Menu Atas */
+    /* Menu Atas */
         .menu-top {
             background-color: #004d99;
             text-align: right;
@@ -42,6 +43,33 @@
         .menu-top .dropdown-item:active {
             background-color: #FFD700 !important;
             color: #003366 !important;
+        }
+
+        /* Visitor Count Section */
+        .visitor-count {
+            display: inline-block;
+            margin-left: 15px;
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .visitor-count i {
+            margin-right: 5px;
+            color: #FFD700;
+        }
+
+        .visitor-count span {
+            color: #FFD700;
+        }
+
+        .visitor-count:hover {
+            cursor: pointer;
+            color: #FFD700;
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
         }
 
         /* Dropdown Menu */
@@ -113,6 +141,26 @@
         .dropdown-toggle::after {
             display: none !important;
         }
+
+        /* Submenu Fakultas di sebelah kanan */
+        .dropdown-menu .dropright .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            background-color: #004d99;
+            border: none;
+        }
+
+        .dropdown-menu .dropright:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu .dropright .dropdown-item:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
     </style>
 </head>
 
@@ -138,12 +186,15 @@
                 <a class="dropdown-item" href="#">Persyaratan</a>
             </div>
         </div>
+        <div class="visitor-count">
+            <i class="fas fa-eye"></i> 
+            <span id="visitorCount">100</span> 
+        </div>
     </div>
 
     <!-- Navbar Utama -->
     <nav class="navbar navbar-expand-lg navbar-main">
         <div class="container-fluid d-flex align-items-center">
-            <!-- Logo Universitas -->
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="<?= base_url('foto/logo1.png'); ?>" alt="Logo" width="100" height="100" class="d-inline-block align-top">
                 <div class="logo-text">
@@ -152,7 +203,6 @@
                 </div>
             </a>
 
-            <!-- Toggle button for mobile -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -161,7 +211,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="<?= site_url('users/home'); ?>">Home</a>
                     </li>
 
                     <!-- Tentang Kami -->
@@ -185,7 +235,21 @@
                             Akademik & Kemahasiswaan
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownAkademik">
-                        <a class="dropdown-item" href="<?= site_url('users/fakultas'); ?>">Fakultas</a>
+                            <div class="dropdown dropright">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="dropdownFakultas" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Fakultas
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownFakultas">
+                                    <a class="dropdown-item" href="https://fia.unsub.ac.id/">Fakultas Ilmu Administrasi</a>
+                                    <a class="dropdown-item" href="https://teknik.unsub.ac.id/">Fakultas Teknik</a>
+                                    <a class="dropdown-item" href="https://hukum.unsub.ac.id/">Fakultas Hukum</a>
+                                    <a class="dropdown-item" href="https://fasilkom.unsub.ac.id/">Fakultas Ilmu Komputer</a>
+                                    <a class="dropdown-item" href="https://fikom.unsub.ac.id/">Fakultas Ilmu Komunikasi</a>
+                                    <a class="dropdown-item" href="https://pertanian.unsub.ac.id/">Fakultas Agro Bisnis dan Rekayasa Pertanian</a>
+                                    <a class="dropdown-item" href="https://fkip.unsub.ac.id/">Fakultas Keguruan dan Ilmu Pendidikan</a>
+                                    <a class="dropdown-item" href="https://map.unsub.ac.id/">Magister Administrasi Public</a>
+                                </div>
+                            </div>
                             <a class="dropdown-item" href="<?= site_url('users/beasiswa'); ?>">Beasiswa</a>
                         </div>
                     </li>
@@ -199,10 +263,18 @@
         </div>
     </nav>
 
-    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('#dropdownFakultas').on('click', function (e) {
+            e.preventDefault(); 
+            var $this = $(this);
+            var $menu = $this.next('.dropdown-menu');
+            
+            $menu.toggle();
+        });
+    </script>
 </body>
 
 </html>
