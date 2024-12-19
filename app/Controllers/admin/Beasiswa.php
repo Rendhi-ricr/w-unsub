@@ -8,6 +8,6 @@ class Beasiswa extends BaseController
 {
     public function index()
     {
-        return view('beasiswa/index');
+        return view('admin/beasiswa/index');
     }
 }

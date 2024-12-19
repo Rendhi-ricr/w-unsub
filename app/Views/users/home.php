@@ -4,50 +4,50 @@
 Home
 <?= $this->endSection(); ?>
 <?= $this->section('content'); ?>
-    <!-- Hero Section -->
-    <div class="hero" style="background-image: url('<?= base_url('foto/banner.png'); ?>'); background-size: cover; background-position: center; height: 350px; color: white; text-align: center;">
+<!-- Hero Section -->
+<div class="hero" style="background-image: url('<?= base_url('foto/banner.png'); ?>'); background-size: cover; background-position: center; height: 350px; color: white; text-align: center;">
     <h1>Selamat Datang Di</h1>
     <h1>Universitas Subang</h1>
     <p>School Of Empowering People</p>
-    <img src="<?=base_url('foto/kampus_merdeka.png');?>" alt="Kampus Merdeka Logo">
+    <img src="<?= base_url('foto/kampus_merdeka.png'); ?>" alt="Kampus Merdeka Logo">
 </div>
 
 <!-- About Section -->
 <div class="about">
-        <div class="about-container">
-            <img src="<?=base_url('foto/foto1.png');?>" alt="Universitas Subang">
-            <div class="about-content">
-                <h2>Universitas Subang</h2>
-                <p>
-                    Universitas Subang (Unsub) merupakan Universitas pertama yang ada di kabupaten Subang, 
-                    memiliki 7 Fakultas dan 16 Program Studi (prodi) dengan jenjang pendidikan S2, S1, dan D3. 
-                    Terdiri atas 2 (dua) kampus, yakni Kampus I dan Kampus II.
-                </p>
-            </div>
+    <div class="about-container">
+        <img src="<?= base_url('foto/foto1.png'); ?>" alt="Universitas Subang">
+        <div class="about-content">
+            <h2>Universitas Subang</h2>
+            <p>
+                Universitas Subang (Unsub) merupakan Universitas pertama yang ada di kabupaten Subang,
+                memiliki 7 Fakultas dan 16 Program Studi (prodi) dengan jenjang pendidikan S2, S1, dan D3.
+                Terdiri atas 2 (dua) kampus, yakni Kampus I dan Kampus II.
+            </p>
         </div>
     </div>
-    <!-- Keunggulan Universitas Subang Section -->
-    <div class="keunggulan">
-        <h2>Keunggulan Universitas Subang</h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3>Biaya Pendidikan Terjangkau</h3>
-                <img src="<?=base_url('foto/icon1.png');?>" alt="Biaya Pendidikan Terjangkau">
-            </div>
-            <div class="card">
-                <h3>Program Studi Beragam</h3>
-                <img src="<?=base_url('foto/icon2.png'); ?>" alt="Program Studi Beragam">
-            </div>
-            <div class="card">
-                <h3>Tersedia Jalur Percepatan (RPL)</h3>
-                <img src="<?=base_url('foto/icon3.png'); ?>"alt="Tersedia Jalur Percepatan (RPL)">
-            </div>
+</div>
+<!-- Keunggulan Universitas Subang Section -->
+<div class="keunggulan">
+    <h2>Keunggulan Universitas Subang</h2>
+    <div class="cards-container">
+        <div class="card">
+            <h3>Biaya Pendidikan Terjangkau</h3>
+            <img src="<?= base_url('foto/icon1.png'); ?>" alt="Biaya Pendidikan Terjangkau">
         </div>
+        <div class="card">
+            <h3>Program Studi Beragam</h3>
+            <img src="<?= base_url('foto/icon2.png'); ?>" alt="Program Studi Beragam">
+        </div>
+        <div class="card">
+            <h3>Tersedia Jalur Percepatan (RPL)</h3>
+            <img src="<?= base_url('foto/icon3.png'); ?>" alt="Tersedia Jalur Percepatan (RPL)">
+        </div>
+    </div>
 
-        <!-- Info Container Section -->
+    <!-- Info Container Section -->
     <div class="info-container">
         <div class="info-image">
-            <img src="<?= base_url('foto/foto3.jpg');?>" alt="Info Image">
+            <img src="<?= base_url('foto/foto3.jpg'); ?>" alt="Info Image">
             <div class="info-text">
                 <div>
                     <h3>2004</h3>
@@ -104,7 +104,7 @@ Home
                 </div>
             </div>
             <div class="news-card">
-            <img src="<?= base_url('foto/berita2.png'); ?>" alt="Berita 2">
+                <img src="<?= base_url('foto/berita2.png'); ?>" alt="Berita 2">
                 <div class="news-info">
                     <div class="news-meta">
                         <span>📅 29-11-2024</span>
@@ -114,7 +114,7 @@ Home
                 </div>
             </div>
             <div class="news-card">
-            <img src="<?= base_url('foto/berita3.png'); ?>" alt="Berita 3">
+                <img src="<?= base_url('foto/berita3.png'); ?>" alt="Berita 3">
                 <div class="news-info">
                     <div class="news-meta">
                         <span>📅 29-11-2024</span>
@@ -130,7 +130,7 @@ Home
         <h2>Agenda Terbaru</h2>
         <div class="agenda-container">
             <div class="agenda-card">
-            <img src="<?= base_url('foto/berita1.png'); ?>" alt="Agenda 1">
+                <img src="<?= base_url('foto/berita1.png'); ?>" alt="Agenda 1">
                 <div class="agenda-info">
                     <div class="agenda-meta">
                         <span>📅 29-11-2024</span>
@@ -140,7 +140,7 @@ Home
                 </div>
             </div>
             <div class="agenda-card">
-            <img src="<?= base_url('foto/berita2.png'); ?>" alt="Agenda 2">
+                <img src="<?= base_url('foto/berita2.png'); ?>" alt="Agenda 2">
                 <div class="agenda-info">
                     <div class="agenda-meta">
                         <span>📅 29-11-2024</span>
@@ -150,7 +150,7 @@ Home
                 </div>
             </div>
             <div class="agenda-card">
-            <img src="<?= base_url('foto/berita3.png'); ?>" alt="Agenda 3">
+                <img src="<?= base_url('foto/berita3.png'); ?>" alt="Agenda 3">
                 <div class="agenda-info">
                     <div class="agenda-meta">
                         <span>📅 29-11-2024</span>
@@ -183,4 +183,4 @@ Home
     </div>
 
 
-<?= $this->endSection(); ?>
+    <?= $this->endSection(); ?>

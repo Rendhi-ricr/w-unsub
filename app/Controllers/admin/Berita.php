@@ -8,6 +8,6 @@ class Berita extends BaseController
 {
     public function index()
     {
-        return view('berita/index');
+        return view('admin/berita/index');
     }
 }
