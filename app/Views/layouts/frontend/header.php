@@ -8,7 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-    /* Menu Atas */
+        /* Menu Atas */
         .menu-top {
             background-color: #004d99;
             text-align: right;
@@ -138,10 +138,6 @@
             font-weight: bold;
         }
 
-        .dropdown-toggle::after {
-            display: none !important;
-        }
-
         /* Submenu Fakultas di sebelah kanan */
         .dropdown-menu .dropright .dropdown-menu {
             top: 0;
@@ -161,6 +157,37 @@
             color: #003366;
         }
 
+        /* Responsiveness */
+        @media (max-width: 767px) {
+            .menu-top {
+                text-align: left;
+            }
+            
+            .navbar-main .nav-link {
+                font-size: 18px;
+                margin-left: 15px;
+            }
+
+            .visitor-count {
+                font-size: 14px;
+            }
+            
+            .navbar-toggler {
+                border-color: white;
+            }
+
+            .navbar-toggler-icon {
+                background-color: white;
+            }
+
+            .logo-text h5 {
+                font-size: 20px;
+            }
+
+            .logo-text span {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
@@ -176,19 +203,18 @@
         <div class="dropdown d-inline">
             <a class="dropdown-toggle" href="#" id="dropdownAlumni" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alumni</a>
             <div class="dropdown-menu" aria-labelledby="dropdownAlumni">
-                <a class="dropdown-item" href="#">Tracer Study</a>
+                <a class="dropdown-item" href="https://tracerstudy.kemdikbud.go.id/kuesioner">Tracer Study</a>
             </div>
         </div>
         <div class="dropdown d-inline">
             <a class="dropdown-toggle" href="#" id="dropdownPMB" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PMB</a>
             <div class="dropdown-menu" aria-labelledby="dropdownPMB">
-                <a class="dropdown-item" href="#">Pendaftaran</a>
-                <a class="dropdown-item" href="#">Persyaratan</a>
+                <a class="dropdown-item" href="https://pmb.unsub.ac.id/">PMB Unsub</a>
             </div>
         </div>
         <div class="visitor-count">
-            <i class="fas fa-eye"></i> 
-            <span id="visitorCount">100</span> 
+            <i class="fas fa-eye"></i>
+            <span id="visitorCount">100</span>
         </div>
     </div>
 
@@ -266,15 +292,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $('#dropdownFakultas').on('click', function (e) {
-            e.preventDefault(); 
-            var $this = $(this);
-            var $menu = $this.next('.dropdown-menu');
-            
-            $menu.toggle();
-        });
-    </script>
 </body>
 
 </html>
