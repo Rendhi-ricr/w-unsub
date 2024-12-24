@@ -121,4 +121,21 @@ class Ukm extends BaseController
 
         return redirect()->to('/admin/ukm')->with('success', 'Data kendaraan berhasil diupdate');
     }
+
+    public function delete($id_ukm)
+    {
+        $ukm = $this->ukm->data_ukm($id_ukm);
+
+        // nama file yang berada dikolom userfile
+        $img = $ukm['gambar'];
+
+        // proses penghapusan file menggunakan fungsi unlink
+        unlink('../public/foto/UKM/' . $img);
+
+        // penghapusan database
+        $this->ukm->delete_data($id_ukm);
+
+        // mengakses halaman berita
+        return redirect()->to('admin/ukm');
+    }
 }

@@ -16,7 +16,24 @@ class Home extends BaseController
 
     public function index()
     {
-        $this->visitorCountModel->incrementVisit('home');
+        // $this->visitorCountModel->incrementVisit('home');
         return view('users/home');
+    }
+
+    public function statistik($lhalaman)
+    {
+        if ($this->request->isAJAX()) { // Pastikan hanya menerima permintaan AJAX
+            $this->visitorCountModel->incrementVisit($lhalaman);
+
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Visit incremented for ' . $lhalaman
+            ]);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'error',
+            'message' => 'Invalid request'
+        ]);
     }
 }

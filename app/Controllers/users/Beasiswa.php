@@ -16,7 +16,7 @@ class Beasiswa extends BaseController
 
     public function index()
     {
-        $this->visitorCountModel->incrementVisit('beasiswa');
+        // $this->visitorCountModel->incrementVisit('beasiswa');
         return view('users/beasiswa');
     }
 }

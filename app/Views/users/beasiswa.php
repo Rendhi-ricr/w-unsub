@@ -18,19 +18,19 @@ Sejarah
         <div class="beasiswa-item">
             <h3>1. KIP Kuliah</h3>
             <p>
-            KIP-Kuliah adalah bantuan biaya pendidikan yang diberikan kepada Mahasiswa yang lulus seleksi masuk PT sehingga pengumumannya adalah selepas anda mendaftar ulang sebagai mahasiswa di PT terkait. Setelah mendaftar ulang, Anda akan diverifikasi kelayakan sebagai penerima KIP-Kuliah.            </p>
+                KIP-Kuliah adalah bantuan biaya pendidikan yang diberikan kepada Mahasiswa yang lulus seleksi masuk PT sehingga pengumumannya adalah selepas anda mendaftar ulang sebagai mahasiswa di PT terkait. Setelah mendaftar ulang, Anda akan diverifikasi kelayakan sebagai penerima KIP-Kuliah. </p>
         </div>
 
         <div class="beasiswa-item">
             <h3>2. Jabar Future Leader Scholarship</h3>
             <p>
-            Merupakan program bantuan biaya pendidikan tinggi dari Pemerintah Provinsi Jawa Barat kepada masyarakat Jabar yang sedang menempuh pendidikan jenjang D3, D4, S1, S2, dan S3 yang berprestasi baik dalam bidang akademik maupun non-akademik.            </p>
+                Merupakan program bantuan biaya pendidikan tinggi dari Pemerintah Provinsi Jawa Barat kepada masyarakat Jabar yang sedang menempuh pendidikan jenjang D3, D4, S1, S2, dan S3 yang berprestasi baik dalam bidang akademik maupun non-akademik. </p>
         </div>
 
         <div class="beasiswa-item">
             <h3>3. Beasiswa Yayasan Kutawaringin</h3>
             <p>
-            Merupakan program bantuan biaya pendidikan tinggi dari Pemerintah Provinsi Jawa Barat kepada masyarakat Jabar yang sedang menempuh pendidikan jenjang D3, D4, S1, S2, dan S3 yang berprestasi baik dalam bidang akademik maupun non-akademik.
+                Merupakan program bantuan biaya pendidikan tinggi dari Pemerintah Provinsi Jawa Barat kepada masyarakat Jabar yang sedang menempuh pendidikan jenjang D3, D4, S1, S2, dan S3 yang berprestasi baik dalam bidang akademik maupun non-akademik.
             </p>
         </div>
     </div>

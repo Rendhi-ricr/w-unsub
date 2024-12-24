@@ -44,7 +44,7 @@
                                     <td><img src="<?= base_url('foto/UKM/' . $u['gambar']) ?>" alt="UKM" style="width: 200px; heigh:10px;"></td>
                                     <td>
                                         <a href="<?= base_url('admin/ukm/edit/' . $u['id_ukm']) ?>" class="btn btn-warning">Edit</a>
-                                        <a href="" class="btn btn-danger">Hapus</a>
+                                        <a href="<?= base_url('admin/ukm/delete/' . $u['id_ukm']) ?>" class="btn btn-danger">Hapus</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

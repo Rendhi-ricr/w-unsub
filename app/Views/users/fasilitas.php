@@ -20,7 +20,7 @@ Sejarah
             <img src="<?= base_url('foto/fasilitas1.png'); ?>" alt="Lab Komputer">
             <p>
                 Lab komputer di Universitas Subang adalah fasilitas penunjang pembelajaran yang dilengkapi dengan perangkat komputer modern,
-                koneksi internet yang stabil, serta berbagai perangkat lunak yang mendukung kegiatan praktikum mahasiswa. 
+                koneksi internet yang stabil, serta berbagai perangkat lunak yang mendukung kegiatan praktikum mahasiswa.
             </p>
         </div>
 
@@ -28,7 +28,7 @@ Sejarah
             <h3>Perpustakaan</h3>
             <img src="<?= base_url('foto/fasilitas2.png'); ?>" alt="Perpustakaan">
             <p>
-                Perpustakaan di Universitas Subang adalah pusat sumber informasi yang dirancang untuk mendukung kebutuhan belajar, 
+                Perpustakaan di Universitas Subang adalah pusat sumber informasi yang dirancang untuk mendukung kebutuhan belajar,
                 penelitian, dan pengajaran. Dengan koleksi buku, jurnal, dan sumber elektronik, perpustakaan menyediakan lingkungan belajar yang nyaman.
             </p>
         </div>
@@ -37,7 +37,7 @@ Sejarah
             <h3>Perpustakaan</h3>
             <img src="<?= base_url('foto/fasilitas3.png'); ?>" alt="Perpustakaan">
             <p>
-                Perpustakaan di Universitas Subang adalah pusat sumber informasi yang dirancang untuk mendukung kebutuhan belajar, 
+                Perpustakaan di Universitas Subang adalah pusat sumber informasi yang dirancang untuk mendukung kebutuhan belajar,
                 penelitian, dan pengajaran. Dengan koleksi buku, jurnal, dan sumber elektronik, perpustakaan menyediakan lingkungan belajar yang nyaman.
             </p>
         </div>

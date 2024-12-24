@@ -16,7 +16,7 @@ class Fasilitas extends BaseController
 
     public function index()
     {
-        $this->visitorCountModel->incrementVisit('fasilitas');
+        // $this->visitorCountModel->incrementVisit('fasilitas');
         return view('users/fasilitas');
     }
 }

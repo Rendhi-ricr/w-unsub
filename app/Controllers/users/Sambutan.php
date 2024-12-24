@@ -17,7 +17,7 @@ class Sambutan extends BaseController
 
     public function index()
     {
-        $this->visitorCountModel->incrementVisit('sambutan');
+        // $this->visitorCountModel->incrementVisit('sambutan');
         return view('users/sambutan');
     }
 }
