@@ -60,4 +60,15 @@ class VisitorCountModel extends Model
             ->groupBy('DATE(date)')
             ->get()->getResultArray();
     }
+
+
+    public function kunjunganHariIni($pageName)
+    {
+        $today = date('Y-m-d'); // Mendapatkan tanggal hari ini
+
+        // Ambil jumlah kunjungan untuk halaman dan tanggal hari ini
+        $record = $this->where(['menu_name' => $pageName, 'visit_date' => $today])->first();
+
+        return $record ? $record['visit_count'] : 0; // Kembalikan 0 jika tidak ada catatan
+    }
 }

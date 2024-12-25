@@ -148,7 +148,7 @@
             border: none;
         }
 
-        .dropdown-menu .dropright:hover > .dropdown-menu {
+        .dropdown-menu .dropright:hover>.dropdown-menu {
             display: block;
         }
 
@@ -162,7 +162,7 @@
             .menu-top {
                 text-align: left;
             }
-            
+
             .navbar-main .nav-link {
                 font-size: 18px;
                 margin-left: 15px;
@@ -171,7 +171,7 @@
             .visitor-count {
                 font-size: 14px;
             }
-            
+
             .navbar-toggler {
                 border-color: white;
             }
@@ -214,7 +214,7 @@
         </div>
         <div class="visitor-count">
             <i class="fas fa-eye"></i>
-            <span id="visitorCount">100</span>
+            <span id="visitorCount"><?= $kun; ?></span>
         </div>
     </div>
 
