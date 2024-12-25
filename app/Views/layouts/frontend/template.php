@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universitas Subang</title>
+    <link href="<?= base_url('assets/css/frontend/home.css') ?>" rel="stylesheet">
 
-    <link href="<?= base_url('assets/css/home.css') ?>" rel="stylesheet">
+    <!-- <link href="<?= base_url('assets/css/home.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/frontend/home.css'); ?>" rel="stylesheet">
     <?= $this->renderSection('css'); ?>
     <link href="<?= base_url('assets/css/frontend/sejarah.css'); ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/frontend/visi_misi.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/frontend/sambutan.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/frontend/sambutan.css'); ?>" rel="stylesheet">  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
