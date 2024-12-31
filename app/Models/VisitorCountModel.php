@@ -8,6 +8,7 @@ class VisitorCountModel extends Model
 {
     protected $table = 'visitor_count';
     protected $primaryKey = 'id';
+    // protected $returnType = 'array';
     protected $allowedFields = ['menu_name', 'visit_date', 'visit_count'];
 
     public function incrementVisit($menuName)

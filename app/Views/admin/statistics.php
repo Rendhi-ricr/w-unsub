@@ -56,7 +56,7 @@
                 <div class="card-body">
                     <h1 class="h5">Grafik Kunjungan Menu</h1>
                     <div style="position: relative; width: 100%;">
-                        <canvas id="visitChart"></canvas>
+                        <canvas id="myChart" width="400" height="200"></canvas>
                     </div>
                 </div>
             </div>
@@ -65,51 +65,45 @@
 </div>
 
 <script>
-    const visitDates = <?= json_encode(array_map(function ($row) {
-                            return date('d-m-Y', strtotime($row['visit_date']));
-                        }, $data)) ?>;
+    // Ambil data dari controller yang dikirim ke view
+    const chartData = <?= $chartData ?>;
 
-    const visitCounts = <?= json_encode(array_column($data, 'visit_count')) ?>;
+    // Siapkan data untuk grafik
+    const labels = [...new Set(chartData.map(item => item.visit_date))]; // Ambil tanggal unik
+    const datasets = [...new Set(chartData.map(item => item.menu_name))].map(menu => {
+        return {
+            label: menu,
+            data: labels.map(date => {
+                const item = chartData.find(data => data.menu_name === menu && data.visit_date === date);
+                return item ? item.visit_count : 0;
+            }),
+            backgroundColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`,
+            borderColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`,
+            borderWidth: 1,
+        };
+    });
 
-    // Periksa jika ada data sebelum membuat grafik
-    if (visitDates.length > 0 && visitCounts.length > 0) {
-        const ctx = document.getElementById('visitChart').getContext('2d');
-        const visitChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: visitDates, // Tanggal
-                datasets: [{
-                    label: 'Jumlah Kunjungan',
-                    data: visitCounts, // Jumlah kunjungan
-                    backgroundColor: 'rgba(0, 153, 255, 0.2)',
-                    borderColor: 'rgb(0, 153, 255)',
-                    borderWidth: 1
-                }]
+
+    const ctx = document.getElementById("myChart").getContext("2d");
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: datasets,
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    beginAtZero: true,
+                },
+                y: {
+                    beginAtZero: true,
+                },
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Tanggal'
-                        }
-                    },
-                    y: {
-                        title: {
-                            display: true,
-                            text: 'Jumlah Kunjungan'
-                        },
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    } else {
-        console.log("Tidak ada data untuk grafik");
-        document.getElementById('visitChart').style.display = 'none';
-    }
+        },
+    });
 </script>
+
 
 <?= $this->endSection() ?>

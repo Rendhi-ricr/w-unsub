@@ -19,36 +19,38 @@ class VisitorController extends BaseController
     public function index()
     {
         $stat = new VisitorCountModel();
-        // Ambil parameter filter dari request GET
-        $menuName = $this->request->getGet('menu_name');
-        $year = $this->request->getGet('year');
-        $month = $this->request->getGet('month');
 
-        // Debug filter input
-        // echo "Filter Menu: $menuName, Tahun: $year, Bulan: $month";
-        // die();
+        // Ambil parameter filter dari request GET dengan validasi sederhana
+        $menuName = filter_var($this->request->getGet('menu_name'), FILTER_SANITIZE_STRING);
+        $year = filter_var($this->request->getGet('year'), FILTER_VALIDATE_INT);
+        $month = filter_var($this->request->getGet('month'), FILTER_VALIDATE_INT);
 
         // Query awal
-        $query = $stat->select('*');
+        $query = $stat->select('menu_name, SUM(visit_count) as visit_count,visit_date');
 
         // Tambahkan filter jika ada
         if ($menuName) {
             $query->where('menu_name', $menuName);
         }
         if ($year) {
-            $query->where('YEAR(visit_date)', $year); // Format YEAR(visit_date) cocok dengan MySQL
+            $query->where('YEAR(visit_date)', $year);
         }
         if ($month) {
-            $query->where('MONTH(visit_date)', $month); // Format MONTH(visit_date) cocok dengan MySQL
+            $query->where('MONTH(visit_date)', $month);
         }
+
+        // Group data berdasarkan bulan
+        $query->groupBy('visit_date, menu_name');
 
         // Eksekusi query
         $data = $query->findAll();
-
-
         // Kirim data ke view
-        return view('admin/statistics', ['data' => $data]);
+        return view('admin/statistics', [
+            'data' => $data,
+            'chartData' => json_encode($data), // Encode data untuk digunakan di JavaScript
+        ]);
     }
+
 
     public function trackVisit($menuName)
     {
