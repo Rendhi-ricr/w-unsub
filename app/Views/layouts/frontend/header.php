@@ -197,7 +197,7 @@
         <div class="dropdown d-inline">
             <a class="dropdown-toggle" href="#" id="dropdownDosen" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dosen</a>
             <div class="dropdown-menu" aria-labelledby="dropdownDosen">
-                <a class="dropdown-item" href="#">SISTER</a>
+                <a class="dropdown-item" href="http://sister.unsub.ac.id/">SISTER</a>
             </div>
         </div>
         <div class="dropdown d-inline">
