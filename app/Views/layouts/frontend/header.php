@@ -212,10 +212,6 @@
                 <a class="dropdown-item" href="https://pmb.unsub.ac.id/">PMB Unsub</a>
             </div>
         </div>
-        <div class="visitor-count">
-            <i class="fas fa-eye"></i>
-            <span id="visitorCount"><?= $kun; ?></span>
-        </div>
     </div>
 
     <!-- Navbar Utama -->

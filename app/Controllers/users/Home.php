@@ -31,7 +31,6 @@ class Home extends BaseController
                 'message' => 'Visit incremented for ' . $lhalaman
             ]);
         }
-
         return $this->response->setJSON([
             'status' => 'error',
             'message' => 'Invalid request'

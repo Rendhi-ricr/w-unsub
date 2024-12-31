@@ -46,6 +46,11 @@
                         <?php endforeach; ?>
                     </select>
                 </div>
+
+                <div class="col-12 text-end">
+                    <a href="<?= site_url('admin/VisitorController/downloadPdf') ?>" class="btn btn-success">Download PDF</a>
+                </div>
+
                 <div class="col-12 text-end">
                     <button type="submit" class="btn btn-primary">Filter</button>
                 </div>
