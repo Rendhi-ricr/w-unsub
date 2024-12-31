@@ -12,7 +12,6 @@ Fasilitas
   <div class="text-center mb-5">
     <h5 class="text-primary">Tentang Kami</h5>
     <h1 class="fw-bold mb-4" style="font-size: 2.5rem;">Fasilitas Kami</h1>
-    <p class="text-muted fs-4">Temukan fasilitas yang mendukung proses belajar dan kegiatan di Universitas Subang</p>
   </div>
 
   <!-- Facility Grid -->

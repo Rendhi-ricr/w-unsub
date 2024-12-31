@@ -10,7 +10,6 @@ Beasiswa
   <div class="text-center mb-5">
     <h5 class="text-primary">Akademik & Kemahasiswaan</h5>
     <h1 class="fw-bold">Program Beasiswa</h1>
-    <p class="text-muted fs-5">Informasi mengenai berbagai program beasiswa yang tersedia di Universitas Subang untuk mendukung pendidikan mahasiswa.</p>
   </div>
 
   <!-- Daftar Beasiswa -->

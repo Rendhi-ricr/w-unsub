@@ -11,9 +11,6 @@ UKM (Unit Kegiatan Mahasiswa)
   <div class="text-center mb-5">
     <h5 class="text-primary">Akademik & Kemahasiswaan</h5>
     <h1 class="fw-bold">Unit Kegiatan Mahasiswa</h1>
-    <p class="text-muted fs-5">
-      Jelajahi berbagai Unit Kegiatan Mahasiswa (UKM) di Universitas Subang. Tingkatkan kemampuan, kembangkan potensi, dan perluas jaringan Anda bersama komunitas mahasiswa lainnya.
-    </p>
   </div>
 
   <!-- Daftar UKM -->
