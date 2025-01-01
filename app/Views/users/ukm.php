@@ -18,17 +18,13 @@ UKM (Unit Kegiatan Mahasiswa)
     <!-- UKM 1 -->
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card shadow-sm border-0">
-        <img 
-          src="path/to/image1.jpg" 
-          class="card-img-top" 
-          alt="Foto UKM 1" 
-          style="height: 200px; object-fit: cover;" />
+        <img src="path/to/image1.jpg" class="card-img-top" alt="Foto UKM 1" style="height: 200px; object-fit: cover;" />
         <div class="card-body">
-          <h5 class="fw-bold">UKM Seni</h5>
+          <h5 class="fw-bold">U.S RADIO</h5>
           <p class="text-secondary">
-            Mengasah bakat seni mahasiswa di bidang tari, musik, seni rupa, dan teater. Tunjukkan kreativitas Anda melalui berbagai kegiatan seni.
+          Unit Kegiatan Mahasiswa U.s Radio merupakan kegiatan mahasiswa yang menaungi mahasiswa/i Universitas Subang untuk menjadi wadah kreativitas mahasiswa dalam bidang penyiaran dan media.          </p>
           </p>
-          <p><strong>Telepon:</strong> 0812-3456-7890</p>
+          <p><strong>Telepon:</strong> 0821-1741-1913</p>
         </div>
       </div>
     </div>
@@ -42,9 +38,10 @@ UKM (Unit Kegiatan Mahasiswa)
           alt="Foto UKM 2" 
           style="height: 200px; object-fit: cover;" />
         <div class="card-body">
-          <h5 class="fw-bold">UKM Olahraga</h5>
+          <h5 class="fw-bold">Dapur Musik</h5>
+          Unit Kegiatan Mahasiswa Dapur Musik merupakan kegiatan mahasiswa yang menaungi mahasiswa/i Universitas Subang yang memiliki minat dalam bidang bermusik.          </p>
           <p class="text-secondary">
-            Fasilitas bagi mahasiswa yang ingin aktif dalam bidang olahraga seperti futsal, badminton, basket, dan lainnya. Tumbuhkan semangat kompetisi dan kebugaran.
+
           </p>
           <p><strong>Telepon:</strong> 0812-1234-5678</p>
         </div>
@@ -60,15 +57,29 @@ UKM (Unit Kegiatan Mahasiswa)
           alt="Foto UKM 3" 
           style="height: 200px; object-fit: cover;" />
         <div class="card-body">
-          <h5 class="fw-bold">UKM Kepemimpinan</h5>
+          <h5 class="fw-bold">Badminton</h5>
           <p class="text-secondary">
-            Mengembangkan kemampuan kepemimpinan mahasiswa melalui pelatihan, workshop, dan kegiatan sosial. Siap menjadi pemimpin masa depan!
+          Unit Kegiatan Mahasiswa Lensa Fix merupakan kegiatan mahasiswa yang menaungi mahasiswa/i Universitas Subang yang memiliki minat pada bidang olahraga badminton.          </p>
           </p>
           <p><strong>Telepon:</strong> 0812-7890-1234</p>
         </div>
       </div>
     </div>
-
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card shadow-sm border-0">
+        <img 
+          src="path/to/image3.jpg" 
+          class="card-img-top" 
+          alt="Foto UKM 3" 
+          style="height: 200px; object-fit: cover;" />
+        <div class="card-body">
+          <h5 class="fw-bold">Lensa Fix</h5>
+          <p class="text-secondary">
+          Unit Kegiatan Mahasiswa Lensa Fix merupakan kegiatan mahasiswa yang menaungi mahasiswa/i Universitas Subang yang memiliki minat fotografi.          </p>
+          <p><strong>Telepon:</strong> 0812-7890-1234</p>
+        </div>
+      </div>
+    </div>
     <!-- Tambahkan UKM lainnya sesuai kebutuhan -->
   </div>
 </div>

@@ -8,9 +8,9 @@ Fasilitas
 
 <div class="container my-5">
     <div class="text-center mb-5">
-        <h5 class="text-primary">Tentang Kami</h5>
+        <h5 class="text-primary">Akademik & Kemahasiswaan</h5>
         <h1 class="fw-bold mb-4" style="font-size: 2.5rem;">Fakultas</h1>
-        <p class="text-center">Universitas Subang memiliki 14 (empat belas) Program Studi yang terangkup dalam 7 Fakultas pilihan yang akan menghantarkanmu ke masa depan.</p>        
+        <p class="text-center" style="font-size: 1.2rem;">Universitas Subang memiliki 14 (empat belas) Program Studi yang terangkup dalam 7 Fakultas pilihan yang akan menghantarkanmu ke masa depan.</p>
         
         <!-- First Row: 2 Faculties -->
         <div class="row row-cols-1 row-cols-md-2 g-4">
