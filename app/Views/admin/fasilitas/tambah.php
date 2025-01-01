@@ -2,6 +2,13 @@
 <?= $this->section('title') ?>Tambah Data Fasilitas<?= $this->endSection() ?>
 <?= $this->section('content') ?>
 <div class="container-fluid p-0">
+    <?php if (session()->getFlashdata('errors')): ?>
+        <div class="alert alert-danger">
+            <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                <p><?= esc($error) ?></p>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 
     <div class="mb-3">
         <div class="row">
@@ -28,7 +35,7 @@
                         <div class="form-group">
                             <label for="gambar">Gambar Fasilitas</label>
                             <input type="file" class="form-control mb-3" id="gambar" name="gambar" accept="image/*">
-                            <img id="preview" class="img-preview d-none" alt="Preview Gambar">
+                            <img id="preview" class="img-preview d-none w-100" alt="Preview Gambar">
                         </div>
                     </div>
                     <div class="card-footer text-right">

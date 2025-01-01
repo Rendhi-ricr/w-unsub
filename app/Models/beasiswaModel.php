@@ -6,14 +6,27 @@ use CodeIgniter\Model;
 
 class beasiswaModel extends Model
 {
-    protected $table = 'tbl_beasiswa'; 
+    protected $table = 'tbl_beasiswa';
+    protected $primaryKey = 'id_beasiswa';
     protected $allowedFields = ['nama_beasiswa', 'deskripsi'];
 
-    public function get_data($nama_beasiswa, $deskripsi)
+    public function data_beasiswa($id_beasiswa)
     {
-        return $this->db->table($this->table)
-            ->where(['nama_beasiswa' => $nama_beasiswa, 'deskripsi' => $deskripsi])
-            ->get()
-            ->getRowArray();
+        return $this->find($id_beasiswa);
+    }
+
+    public function update_data($data, $id_beasiswa)
+    {
+        $query = $this->db->table($this->table)->update(
+            $data,
+            array('id_beasiswa' => $id_beasiswa)
+        );
+        return $query;
+    }
+
+    public function delete_data($id_beasiswa)
+    {
+        $query = $this->db->table($this->table)->delete(array('id_beasiswa' => $id_beasiswa));
+        return $query;
     }
 }

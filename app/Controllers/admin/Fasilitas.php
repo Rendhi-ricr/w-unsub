@@ -37,7 +37,7 @@ class Fasilitas extends BaseController
         $validation = $this->validate([
             'nama_fasilitas' => 'required',
             'deskripsi' => 'required',
-            'gambar' => 'uploaded[gambar]|is_image[gambar]|max_size[gambar,2048]', // Validasi untuk file gambar
+            'gambar' => 'uploaded[gambar]|is_image[gambar]' // Validasi untuk file gambar
         ]);
 
         if (!$validation) {
@@ -62,7 +62,7 @@ class Fasilitas extends BaseController
 
         $model->save($data);
 
-        return redirect()->to('/admin/fasilitas')->with('success', 'Data kendaraan berhasil disimpan');
+        return redirect()->to('/admin/fasilitas')->with('success', 'Data fasilitas berhasil disimpan');
     }
 
     public function edit($id_fasilitas)

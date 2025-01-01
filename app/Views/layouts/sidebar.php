@@ -66,9 +66,26 @@
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Kontak</span>
                 </a>
             </li>
+            <li class="sidebar-header">
+                Statistik Pengunjung
+            </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="<?= base_url('admin/VisitorController') ?>">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Statistik Pengunjung</span>
+                </a>
+            </li>
+
+            <li class="sidebar-header">
+                Informasi
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="<?= base_url('admin/berita') ?>">
+                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Berita</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="<?= base_url('admin/agenda') ?>">
+                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Agenda</span>
                 </a>
             </li>
         </ul>

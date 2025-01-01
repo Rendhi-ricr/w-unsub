@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-6">
                 <div class="text-end">
-                    <a href="" class="btn btn-primary"><i class="ti ti-plus ti-sm"></i> Tambah</a>
+                    <a href="<?= base_url('admin/beasiswa/tambah') ?>" class="btn btn-primary"><i class="ti ti-plus ti-sm"></i> Tambah</a>
                 </div>
             </div>
         </div>
@@ -31,6 +31,23 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <?php
+                                $no = 1;
+                                foreach ($beasiswa as $bea) :
+                                ?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $bea['nama_beasiswa']; ?></td>
+                                        <td><?= $bea['deskripsi']; ?></td>
+                                        <td>
+                                            <a href="<?= base_url('admin/beasiswa/edit/' . $bea['id_beasiswa']) ?>" class="btn btn-warning">Edit</a>
+                                            <a href="<?= base_url('admin/beasiswa/delete/' . $bea['id_beasiswa']) ?>" class="btn btn-danger">Hapus</a>
+                                        </td>
+                                    </tr>
+
+                                <?php endforeach; ?>
+                            </tbody>
                         </table>
                     </div>
 

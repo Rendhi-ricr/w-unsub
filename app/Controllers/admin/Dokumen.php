@@ -32,7 +32,6 @@ class Dokumen extends BaseController
     {
         $model  = $this->dok->save([
             'nama_dokumen' => $this->request->getPost('nama_dokumen'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'link' => $this->request->getPost('link'),
         ]);
         if ($model) {

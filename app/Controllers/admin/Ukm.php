@@ -80,46 +80,46 @@ class Ukm extends BaseController
 
     public function update($id_ukm)
     {
-        $model = new ukmModel();
-
         // Validasi input
-        $validation = $this->validate([
+        $this->validate([
             'nama_ukm' => 'required',
             'deskripsi' => 'required',
             'kontak' => 'required',
-            'gambar' => 'uploaded[gambar]|is_image[gambar]|max_size[gambar,2048]', // Validasi untuk file gambar
+            'gambar' => 'is_image[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]',
         ]);
 
-        if (!$validation) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        $ukmModel = new UkmModel();
+        $ukm = $ukmModel->find($id_ukm);
+
+        if (!$ukm) {
+            return redirect()->back()->with('error', 'Data UKM tidak ditemukan.');
         }
 
-        // Upload file gambar jika ada
+        // Cek apakah ada file baru diunggah
         $gambar = $this->request->getFile('gambar');
-        $ukm = $model->find($id_ukm);
-        $namaGambar = $ukm['gambar']; // Gambar lama
-
         if ($gambar && $gambar->isValid() && !$gambar->hasMoved()) {
-            // Hapus gambar lama jika ada
-            if ($namaGambar && file_exists(ROOTPATH . 'public/foto/UKM/' . $namaGambar)) {
-                unlink(ROOTPATH . 'public/foto/UKM/' . $namaGambar);
-            }
+            // Simpan file gambar baru
+            $newName = $gambar->getRandomName();
+            $gambar->move('foto/UKM', $newName);
 
-            $namaGambar = $gambar->getRandomName();
-            $gambar->move(ROOTPATH . 'public/foto/UKM', $namaGambar);
+            // Hapus file gambar lama jika ada
+            if ($ukm['gambar'] && file_exists('foto/UKM/' . $ukm['gambar'])) {
+                unlink('foto/UKM/' . $ukm['gambar']);
+            }
+        } else {
+            // Gunakan gambar lama
+            $newName = $ukm['gambar'];
         }
 
         // Update data ke database
-        $data = [
+        $ukmModel->update($id_ukm, [
             'nama_ukm' => $this->request->getPost('nama_ukm'),
             'deskripsi' => $this->request->getPost('deskripsi'),
-            'gambar' => $namaGambar, // Nama file gambar
             'kontak' => $this->request->getPost('kontak'),
-        ];
+            'gambar' => $newName,
+        ]);
 
-        $model->update($id_ukm, $data);
-
-        return redirect()->to('/admin/ukm')->with('success', 'Data kendaraan berhasil diupdate');
+        return redirect()->to(base_url('admin/ukm'))->with('success', 'Data UKM berhasil diperbarui.');
     }
 
     public function delete($id_ukm)

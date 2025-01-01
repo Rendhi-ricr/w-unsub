@@ -22,10 +22,6 @@
                             <input type="text" class="form-control mb-3" id="nama_dokumen" name="nama_dokumen" value="<?= $d['nama_dokumen'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="deskripsi">Deskripsi</label>
-                            <textarea name="deskripsi" id="deskripsi" class="form-control mb-3"><?= $d['deskripsi']; ?></textarea>
-                        </div>
-                        <div class="form-group">
                             <label for="link">Link Dokument</label>
                             <input type="text" class="form-control mb-3" id="link" name="link" value="<?= $d['link'] ?>">
                         </div>

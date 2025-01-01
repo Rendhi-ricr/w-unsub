@@ -6,20 +6,27 @@ use CodeIgniter\Model;
 
 class beritaModel extends Model
 {
-    protected $table = 'tbl_berita'; 
-    protected $allowedFields = ['judul_berita', 'deskripsi', 'tanggal', 'gambar', 'kategori']; 
+    protected $table = 'tbl_berita';
+    protected $primaryKey = 'id_berita';
+    protected $allowedFields = ['judul_berita', 'deskripsi', 'tanggal', 'gambar'];
 
-    public function get_data($judul_berita, $deskripsi, $tanggal, $gambar, $kategori)
+    public function data_berita($id_berita)
     {
-        return $this->db->table($this->table)
-            ->where([
-                'judul_berita' => $judul_berita,
-                'deskripsi' => $deskripsi,
-                'tanggal' => $tanggal,
-                'gambar' => $gambar,
-                'kategori' => $kategori
-            ])
-            ->get()
-            ->getRowArray();
+        return $this->find($id_berita);
+    }
+
+    public function update_data($data, $id_berita)
+    {
+        $query = $this->db->table($this->table)->update(
+            $data,
+            array('id_berita' => $id_berita)
+        );
+        return $query;
+    }
+
+    public function delete_data($id_berita)
+    {
+        $query = $this->db->table($this->table)->delete(array('id_berita' => $id_berita));
+        return $query;
     }
 }

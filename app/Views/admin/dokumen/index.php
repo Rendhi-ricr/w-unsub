@@ -27,7 +27,6 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Dokumen</th>
-                                    <th>Deskripsi</th>
                                     <th>Link</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -40,7 +39,6 @@
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $d['nama_dokumen']; ?></td>
-                                        <td><?= $d['deskripsi']; ?></td>
                                         <td><a href="<?= $d['link']; ?>"><?= $d['link']; ?></a></td>
                                         <td>
                                             <a href="<?= base_url('admin/dokumen/edit/' . $d['id_dokumen']) ?>" class="btn btn-warning">Edit</a>

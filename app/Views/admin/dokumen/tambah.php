@@ -22,12 +22,8 @@
                             <input type="text" class="form-control mb-3" id="nama_dokumen" name="nama_dokumen" placeholder="Masukkan nama dokumen">
                         </div>
                         <div class="form-group">
-                            <label for="deskripsi">Deskripsi</label>
-                            <textarea name="deskripsi" id="deskripsi" class="form-control mb-3" placeholder="Masukan deskripsi dari fasilitas"></textarea>
-                        </div>
-                        <div class="form-group">
                             <label for="link">Link Dokument</label>
-                            <input type="text" class="form-control mb-3" id="link" name="link" placeholder="Masukkan link dokumen">
+                            <input type="url" class="form-control mb-3" id="link" name="link" placeholder="Masukkan link dokumen">
                         </div>
                     </div>
                     <div class="card-footer text-right">

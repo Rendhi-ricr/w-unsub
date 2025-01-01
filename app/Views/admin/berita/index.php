@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-6">
                 <div class="text-end">
-                    <a href="" class="btn btn-primary"><i class="ti ti-plus ti-sm"></i> Tambah</a>
+                    <a href="<?= base_url('admin/berita/tambah') ?>" class="btn btn-primary"><i class="ti ti-plus ti-sm"></i> Tambah</a>
                 </div>
             </div>
         </div>
@@ -28,12 +28,28 @@
                                     <th>No</th>
                                     <th>Judul Berita</th>
                                     <th>Deskripsi</th>
-                                    <th>Tanggal</th>
+                                    <th>Tanggal Dibuat</th>
                                     <th>Gambar</th>
-                                    <th>Kategori</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <?php
+                                $no = 1;
+                                foreach ($berita as $b) : ?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $b['judul_berita']; ?></td>
+                                        <td><?= $b['deskripsi']; ?></td>
+                                        <td><?= $b['tanggal']; ?></td>
+                                        <td><img src="<?= base_url('foto/berita/' . $b['gambar']) ?>" alt="Berita" style="width: 200px; heigh:10px;"></td>
+                                        <td>
+                                            <a href="<?= base_url('admin/berita/edit/' . $b['id_berita']) ?>" class="btn btn-warning">Edit</a>
+                                            <a href="<?= base_url('admin/berita/delete/' . $b['id_berita']) ?>" class="btn btn-danger">Hapus</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
                         </table>
                     </div>
 

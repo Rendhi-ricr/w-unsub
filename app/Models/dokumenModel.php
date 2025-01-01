@@ -8,7 +8,7 @@ class dokumenModel extends Model
 {
     protected $table = 'tbl_dokumen';
     protected $primaryKey = 'id_dokumen';
-    protected $allowedFields = ['nama_dokumen', 'deskripsi', 'link'];
+    protected $allowedFields = ['nama_dokumen', 'link'];
 
     public function data_dokumen($id_dokumen)
     {
