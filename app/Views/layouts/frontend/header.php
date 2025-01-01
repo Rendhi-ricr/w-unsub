@@ -258,19 +258,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownAkademik">
                             <div class="dropdown dropright">
-                                <a class="dropdown-item dropdown-toggle" href="#" id="dropdownFakultas" role="button" aria-haspopup="true" aria-expanded="false">
+                                <a class="dropdown-item dropdown-toggle"  href="<?= site_url('users/fakultas'); ?>" id="dropdownFakultas" role="button" aria-haspopup="true" aria-expanded="false">
                                     Fakultas
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownFakultas">
-                                    <a class="dropdown-item" href="https://fia.unsub.ac.id/">Fakultas Ilmu Administrasi</a>
-                                    <a class="dropdown-item" href="https://teknik.unsub.ac.id/">Fakultas Teknik</a>
-                                    <a class="dropdown-item" href="https://hukum.unsub.ac.id/">Fakultas Hukum</a>
-                                    <a class="dropdown-item" href="https://fasilkom.unsub.ac.id/">Fakultas Ilmu Komputer</a>
-                                    <a class="dropdown-item" href="https://fikom.unsub.ac.id/">Fakultas Ilmu Komunikasi</a>
-                                    <a class="dropdown-item" href="https://pertanian.unsub.ac.id/">Fakultas Agro Bisnis dan Rekayasa Pertanian</a>
-                                    <a class="dropdown-item" href="https://fkip.unsub.ac.id/">Fakultas Keguruan dan Ilmu Pendidikan</a>
-                                    <a class="dropdown-item" href="https://map.unsub.ac.id/">Magister Administrasi Public</a>
-                                </div>
                             </div>
                             <a class="dropdown-item" href="<?= site_url('users/beasiswa'); ?>">Beasiswa</a>
                         </div>
