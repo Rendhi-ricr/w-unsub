@@ -1,16 +1,16 @@
 <?= $this->extend('layouts/base') ?>
-<?= $this->section('title') ?>Data Berita<?= $this->endSection() ?>
+<?= $this->section('title') ?>Data Agenda<?= $this->endSection() ?>
 <?= $this->section('content') ?>
 <div class="container-fluid p-0">
 
     <div class="mb-3">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="h3 d-inline align-middle">Data Berita</h1>
+                <h1 class="h3 d-inline align-middle">Data Agenda</h1>
             </div>
             <div class="col-md-6">
                 <div class="text-end">
-                    <a href="" class="btn btn-primary"><i class="ti ti-plus ti-sm"></i> Tambah</a>
+                    <a href="<?= base_url('admin/agenda/tambah') ?>" class="btn btn-primary"><i class="ti ti-plus ti-sm"></i> Tambah</a>
                 </div>
             </div>
         </div>
@@ -31,9 +31,32 @@
                                     <th>Tanggal</th>
                                     <th>tempat</th>
                                     <th>Penyelenggara</th>
+                                    <th>Tanggal Dibuat</th>
+                                    <th>Banner</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <?php
+                                $no = 1;
+                                foreach ($agenda as $a) :
+                                ?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $a['nama_acara']; ?></td>
+                                        <td><?= $a['deskripsi']; ?></td>
+                                        <td><?= $a['tanggal']; ?></td>
+                                        <td><?= $a['tempat']; ?></td>
+                                        <td><?= $a['penyelenggara']; ?></td>
+                                        <td><?= $a['tanggal_buat']; ?></td>
+                                        <td><img src="<?= base_url('foto/agenda/' . $a['banner']) ?>" alt="Berita" style="width: 200px; heigh:10px;"></td>
+                                        <td>
+                                            <a href="<?= base_url('admin/agenda/edit/' . $a['id_agenda']) ?>" class="btn btn-warning">Edit</a>
+                                            <a href="<?= base_url('admin/agenda/delete/' . $a['id_agenda']) ?>" class="btn btn-danger">Hapus</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
                         </table>
                     </div>
 

@@ -2,8 +2,6 @@
 
 namespace App\Controllers\admin;
 
-use App\Models\ukmModel;
-
 use App\Controllers\BaseController;
 use App\Models\beritaModel;
 
@@ -85,21 +83,26 @@ class Berita extends BaseController
         $validation = $this->validate([
             'judul_berita' => 'required',
             'deskripsi' => 'required',
-            'gambar' => 'uploaded[gambar]|is_image[gambar]|max_size[gambar,2048]', // Validasi untuk file gambar
+            'gambar' => 'if_exist|is_image[gambar]|max_size[gambar,2048]|ext_in[gambar,jpg,jpeg,png]',
         ]);
 
         if (!$validation) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        // Upload file gambar jika ada
-        $gambar = $this->request->getFile('gambar');
+        // Cek apakah data ada
         $berita = $model->find($id_berita);
+        if (!$berita) {
+            return redirect()->to('/admin/berita')->with('error', 'Berita tidak ditemukan');
+        }
+
+        // Proses gambar
+        $gambar = $this->request->getFile('gambar');
         $namaGambar = $berita['gambar']; // Gambar lama
 
         if ($gambar && $gambar->isValid() && !$gambar->hasMoved()) {
             // Hapus gambar lama jika ada
-            if ($namaGambar && file_exists(ROOTPATH . 'public/foto/berita/' . $namaGambar)) {
+            if ($namaGambar && is_file(ROOTPATH . 'public/foto/berita/' . $namaGambar)) {
                 unlink(ROOTPATH . 'public/foto/berita/' . $namaGambar);
             }
 
@@ -107,16 +110,32 @@ class Berita extends BaseController
             $gambar->move(ROOTPATH . 'public/foto/berita', $namaGambar);
         }
 
-        // Update data ke database
+        // Update data
         $data = [
             'judul_berita' => $this->request->getPost('judul_berita'),
-            'deskripsi' => $this->request->getPost('deskripsi'), #
-            'tanggal' => date('Y-m-d'),
-            'gambar' => $namaGambar, // Nama file gambar
+            'deskripsi' => $this->request->getPost('deskripsi'),
+            'gambar' => $namaGambar,
         ];
-
-        $model->update_data($data, $id_berita);
+        $model->update($id_berita, $data);
 
         return redirect()->to('/admin/berita')->with('success', 'Data Berita berhasil diupdate');
+    }
+
+
+    public function delete($id_berita)
+    {
+        $berita = $this->berita->data_berita($id_berita);
+
+        // nama file yang berada dikolom userfile
+        $img = $berita['gambar'];
+
+        // proses penghapusan file menggunakan fungsi unlink
+        unlink('../public/foto/berita/' . $img);
+
+        // penghapusan database
+        $this->berita->delete_data($id_berita);
+
+        // mengakses halaman berita
+        return redirect()->to('admin/berita');
     }
 }

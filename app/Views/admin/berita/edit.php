@@ -43,7 +43,7 @@
                             <label for="gambar">Gambar</label>
                             <input type="file" class="form-control mb-3" id="gambar" name="gambar" accept="image/*">
                             <?php if ($berita['gambar']): ?>
-                                <img src="<?= base_url('foto/berita/' . $berita['gambar']) ?>" alt="UKM" class="img-thumbnail mt-2" width="200">
+                                <img src="<?= base_url('foto/berita/' . $berita['gambar']) ?>" alt="Berita" class="img-thumbnail mt-2" width="200">
                             <?php endif; ?>
                         </div>
                     </div>

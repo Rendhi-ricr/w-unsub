@@ -6,19 +6,27 @@ use CodeIgniter\Model;
 
 class agendaModel extends Model
 {
-    protected $table = 'tbl_agenda'; 
-    protected $allowedFields = ['nama_acara', 'deskripsi', 'tanggal', 'tempat', 'penyelenggara'];
+    protected $table = 'tbl_agenda';
+    protected $primaryKey = 'id_agenda';
+    protected $allowedFields = ['nama_acara', 'deskripsi', 'tanggal', 'tempat', 'penyelenggara', 'banner', 'tanggal_buat'];
 
-    public function get_data($nama_acara, $deskripsi, $tanggal, $tempat, $penyelenggara)
+    public function data_agenda($id_agenda)
     {
-        return $this->db->table($this->table)
-            ->where(['nama_acara' => $nama_acara, 
-            'deskripsi' => $deskripsi, 
-            'tanggal' => $tanggal, 
-            'tempat'=> $tempat, 
-            'penyelenggara' => $penyelenggara
-            ])
-            ->get()
-            ->getRowArray();
+        return $this->find($id_agenda);
+    }
+
+    public function update_data($data, $id_agenda)
+    {
+        $query = $this->db->table($this->table)->update(
+            $data,
+            array('id_agenda' => $id_agenda)
+        );
+        return $query;
+    }
+
+    public function delete_data($id_agenda)
+    {
+        $query = $this->db->table($this->table)->delete(array('id_agenda' => $id_agenda));
+        return $query;
     }
 }
