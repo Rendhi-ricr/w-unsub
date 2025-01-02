@@ -1,23 +1,26 @@
 <?php
 
 namespace App\Controllers\users;
+use App\Models\ukmModel;
 
 use App\Controllers\BaseController;
-use App\Models\VisitorCountModel;
+// use App\Models\VisitorCountModel;
 
 class Ukm extends BaseController
 {
-    protected $visitorCountModel;
+    protected $ukm;
 
     public function __construct()
     {
-        $this->visitorCountModel = new VisitorCountModel();
+        $this->ukm = new ukmModel();
     }
-
 
     public function index()
     {
-        // $this->visitorCountModel->incrementVisit('ukm');
-        return view('users/ukm');
+        $ukm = $this->ukm->findAll();
+        $data = [
+            'ukm' => $ukm
+        ];
+        return view('users/ukm', $data);
     }
 }

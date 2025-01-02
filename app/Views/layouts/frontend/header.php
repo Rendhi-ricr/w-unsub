@@ -213,6 +213,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Navbar Utama -->
     <nav class="navbar navbar-expand-lg navbar-main">
@@ -259,6 +260,15 @@
                             <a class="dropdown-item" href="<?= site_url('users/fakultas'); ?>">Fakultas</a>
                             <a class="dropdown-item" href="<?= site_url('users/beasiswa'); ?>">Beasiswa</a>
                             <a class="dropdown-item" href="<?= site_url('users/ukm'); ?>">UKM</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownInformasi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Informasi
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownInformasi">
+                            <a class="dropdown-item" href="<?= site_url('users/berita'); ?>">Berita</a>
+                            <a class="dropdown-item" href="<?= site_url('users/agenda'); ?>">Agenda</a>
                         </div>
                     </li>
 

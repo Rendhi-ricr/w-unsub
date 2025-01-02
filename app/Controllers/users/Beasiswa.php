@@ -1,22 +1,26 @@
 <?php
 
 namespace App\Controllers\users;
+use App\Models\beasiswaModel;
 
 use App\Controllers\BaseController;
-use App\Models\VisitorCountModel;
+// use App\Models\VisitorCountModel;
 
 class Beasiswa extends BaseController
 {
-    protected $visitorCountModel;
+    protected $beasiswa;
 
     public function __construct()
     {
-        $this->visitorCountModel = new VisitorCountModel();
+        $this->beasiswa = new beasiswaModel();
     }
 
     public function index()
     {
-        // $this->visitorCountModel->incrementVisit('beasiswa');
-        return view('users/beasiswa');
+        $beasiswa = $this->beasiswa->findAll();
+        $data = [
+            'beasiswa' => $beasiswa
+        ];
+        return view('users/beasiswa', $data);
     }
 }
