@@ -247,7 +247,6 @@
                             <a class="dropdown-item" href="<?= site_url('users/sambutan'); ?>">Sambutan Rektor</a>
                             <a class="dropdown-item" href="<?= site_url('users/fasilitas'); ?>">Fasilitas</a>
                             <a class="dropdown-item" href="<?= site_url('users/dokumen'); ?>">Dokumen Akreditasi</a>
-                            <a class="dropdown-item" href="<?= site_url('users/ukm'); ?>">UKM</a>
                         </div>
                     </li>
 
@@ -257,12 +256,9 @@
                             Akademik & Kemahasiswaan
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownAkademik">
-                            <div class="dropdown dropright">
-                                <a class="dropdown-item dropdown-toggle"  href="<?= site_url('users/fakultas'); ?>" id="dropdownFakultas" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Fakultas
-                                </a>
-                            </div>
+                            <a class="dropdown-item" href="<?= site_url('users/fakultas'); ?>">Fakultas</a>
                             <a class="dropdown-item" href="<?= site_url('users/beasiswa'); ?>">Beasiswa</a>
+                            <a class="dropdown-item" href="<?= site_url('users/ukm'); ?>">UKM</a>
                         </div>
                     </li>
 
