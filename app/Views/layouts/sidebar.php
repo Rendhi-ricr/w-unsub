@@ -5,7 +5,7 @@
         </a>
         <ul class="sidebar-nav">
 
-            <li class="sidebar-item">
+            <!-- <li class="sidebar-item">
                 <a class="sidebar-link" href="<?= base_url('admin') ?>">
                     <i class="align-middle" data-feather="square"></i> <span class="align-middle">Dashboard</span>
                 </a>
@@ -27,7 +27,7 @@
                 <a class="sidebar-link" href="<?= base_url('admin/dokumen') ?>">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle"> Data Dokumen Akreditasi</span>
                 </a>
-            </li>
+            </li> -->
             <!-- <li class="sidebar-item">
                 <a class="sidebar-link" href="">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Dokumen Akreditasi</span>
@@ -52,18 +52,8 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= base_url('admin/berita') ?>">
-                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Data Berita</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= base_url('admin/agenda') ?>">
-                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Data Agenda</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="">
-                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Kontak</span>
+                <a class="sidebar-link" href="<?= base_url('admin/fakultas') ?>">
+                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Data Fakultas</span>
                 </a>
             </li>
             <li class="sidebar-header">
@@ -75,7 +65,7 @@
                 </a>
             </li>
 
-            <li class="sidebar-header">
+            <!-- <li class="sidebar-header">
                 Informasi
             </li>
             <li class="sidebar-item">
@@ -87,7 +77,7 @@
                 <a class="sidebar-link" href="<?= base_url('admin/agenda') ?>">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Agenda</span>
                 </a>
-            </li>
+            </li> -->
         </ul>
 
 
