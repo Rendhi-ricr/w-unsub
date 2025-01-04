@@ -1,7 +1,7 @@
 <?= $this->extend('layouts/frontend/template'); ?>
 
 <?= $this->section('title'); ?>
-Fasilitas
+Fakultas
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
