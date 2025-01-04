@@ -22,7 +22,7 @@ class Ukm extends BaseController
         $data = [
             'ukm' => $ukm
         ];
-        return view('users/ukm', $data);
+        return view('ukm', $data);
     }
 
     public function aindex()
