@@ -213,7 +213,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!-- Navbar Utama -->
     <nav class="navbar navbar-expand-lg navbar-main">
@@ -234,7 +234,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('users/home'); ?>">Home</a>
+                        <a class="nav-link" href="<?= site_url('home'); ?>">Home</a>
                     </li>
 
                     <!-- Tentang Kami -->
@@ -258,7 +258,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownAkademik">
                             <a class="dropdown-item" href="<?= site_url('users/fakultas'); ?>">Fakultas</a>
-                            <a class="dropdown-item" href="<?= site_url('users/beasiswa'); ?>">Beasiswa</a>
+                            <a class="dropdown-item" href="<?= site_url('beasiswa'); ?>">Beasiswa</a>
                             <a class="dropdown-item" href="<?= site_url('users/ukm'); ?>">UKM</a>
                         </div>
                     </li>

@@ -28,7 +28,7 @@
     $uri = service('uri');
 
     // Menampilkan segment URI
-    $updateView = $uri->getSegment(2);
+    $updateView = $uri->getSegment(1);
     ?>
 
     <!-- Konten Utama -->
@@ -52,7 +52,7 @@
             setTimeout(function() {
                 // Kirim permintaan AJAX ke server
                 $.ajax({
-                    url: "<?= site_url('users/home/statistik') ?>/" + menuName,
+                    url: "<?= site_url('home/statistik') ?>/" + encodeURIComponent(menuName),
                     method: "POST",
                     dataType: "json",
                     success: function(response) {
