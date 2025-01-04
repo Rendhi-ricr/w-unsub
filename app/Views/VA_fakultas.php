@@ -40,7 +40,7 @@
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $fak['nama_fakultas']; ?></td>
-                                        <td><?= $fak['prodi']; ?></td>
+                                        <td><img src="<?= base_url('foto/fakultas/' . $fak['logo']) ?>" alt="<?= $fak['nama_fakultas'] ?>" style="width: 200px; heigh:10px;"></td>
                                         <td><a href="<?= $fak['link']; ?>"><?= $fak['nama_fakultas']; ?></a></td>
                                         <td>
                                             <a href="<?= base_url('fakultas/edit/' . $fak['id_fakultas']) ?>" class="btn btn-warning">Edit</a>

@@ -42,21 +42,30 @@ class Fakultas extends BaseController
         // Validasi input
         if (!$this->validate([
             'nama_fakultas' => 'required',
-            'prodi' => 'required',
+            'gambar' => 'is_image[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]',
             'link' => 'required|valid_url',
         ])) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
+        $gambar = $this->request->getFile('gambar');
+        if ($gambar->isValid() && !$gambar->hasMoved()) {
+            $namaGambar = $gambar->getRandomName();
+            $gambar->move(ROOTPATH . 'public/foto/fakultas', $namaGambar); // Pastikan folder 'public/foto/fakultas' ada
+        } else {
+            return redirect()->back()->withInput()->with('errors', ['Gagal mengunggah gambar']);
+        }
+
         // Simpan data
         $this->fakultas->save([
             'nama_fakultas' => $this->request->getPost('nama_fakultas'),
-            'prodi' => $this->request->getPost('prodi'),
+            'logo' => $namaGambar,
             'link' => $this->request->getPost('link'),
         ]);
 
         return redirect()->to('/fakultas/aindex')->with('success', 'Data berhasil disimpan!');
     }
+
 
     public function edit($id_fakultas)
     {
@@ -74,21 +83,46 @@ class Fakultas extends BaseController
         // Validasi input
         if (!$this->validate([
             'nama_fakultas' => 'required',
-            'prodi' => 'required',
             'link' => 'required|valid_url',
-        ])) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+            'gambar' => 'if_exist|mime_in[gambar,image/jpg,image/jpeg,image/png]|max_size[gambar,2048]',
+        ])) if (!$this->validate([
+            'nama_fakultas' => 'required',
+            'gambar' => 'is_image[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]',
+            'link' => 'required|valid_url',
+        ]));
+        $models = new fakultasModels();
+        $fakultas = $models->find($id_fakultas);
+
+        if (!$fakultas) {
+            return redirect()->back()->with('error', 'Data Fakultas tidak ditemukan.');
+        }
+
+        $gambar = $this->request->getFile('gambar');
+        if ($gambar && $gambar->isValid() && !$gambar->hasMoved()) {
+            // Simpan file gambar baru
+            $newName = $gambar->getRandomName();
+            $gambar->move('foto/fakultas', $newName);
+
+            // Hapus file gambar lama jika ada
+            if ($fakultas['logo'] && file_exists('foto/fakultas/' . $fakultas['logo'])) {
+                unlink('foto/fakultas/' . $fakultas['logo']);
+            }
+        } else {
+            // Gunakan gambar lama
+            $newName = $fakultas['logo'];
         }
 
         // Update data
         $this->fakultas->update($id_fakultas, [
             'nama_fakultas' => $this->request->getPost('nama_fakultas'),
-            'prodi' => $this->request->getPost('prodi'),
+            'logo' => $newName,
             'link' => $this->request->getPost('link'),
         ]);
 
         return redirect()->to('/fakultas/aindex')->with('success', 'Data berhasil diperbarui!');
     }
+
+
 
     public function delete($id_fakultas)
     {
