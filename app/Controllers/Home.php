@@ -43,21 +43,8 @@ class Home extends BaseController
         ]);
     }
 
-
-    // public function statistik($lhalaman)
-    // {
-    //     if ($this->request->isAJAX()) {
-    //         $this->visitorCountModel->incrementVisit($lhalaman);
-
-    //         return $this->response->setJSON([
-    //             'status' => 'success',
-    //             'message' => 'Visit incremented for ' . $lhalaman,
-    //         ]);
-    //     }
-
-    //     return $this->response->setJSON([
-    //         'status' => 'error',
-    //         'message' => 'Invalid request',
-    //     ]);
-    // }
+    public function aindex()
+    {
+        return view('VA_home');
+    }
 }

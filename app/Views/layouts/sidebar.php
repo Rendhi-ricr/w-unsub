@@ -42,17 +42,17 @@
                 </a>
             </li> -->
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= base_url('admin/ukm') ?>">
+                <a class="sidebar-link" href="<?= base_url('ukm/aindex') ?>">
                     <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Data UKM</span>
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= base_url('admin/beasiswa') ?>">
+                <a class="sidebar-link" href="<?= base_url('beasiswa/aindex') ?>">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Data Beasiswa</span>
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= base_url('admin/fakultas') ?>">
+                <a class="sidebar-link" href="<?= base_url('fakultas/aindex') ?>">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Data Fakultas</span>
                 </a>
             </li>
@@ -60,7 +60,7 @@
                 Statistik Pengunjung
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= base_url('admin/VisitorController') ?>">
+                <a class="sidebar-link" href="<?= base_url('VisitorController') ?>">
                     <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Statistik Pengunjung</span>
                 </a>
             </li>
