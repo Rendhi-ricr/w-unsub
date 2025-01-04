@@ -8,7 +8,7 @@ class fakultasModels extends Model
 {
     protected $table = 'tbl_fakultas';
     protected $primaryKey = 'id_fakultas';
-    protected $allowedFields = ['nama_fakultas', 'prodi', 'link'];
+    protected $allowedFields = ['nama_fakultas', 'logo', 'link'];
 
     public function data_fakultas($id_fakultas)
     {
