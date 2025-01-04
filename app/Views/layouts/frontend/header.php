@@ -257,9 +257,9 @@
                             Akademik & Kemahasiswaan
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownAkademik">
-                            <a class="dropdown-item" href="<?= site_url('users/fakultas'); ?>">Fakultas</a>
+                            <a class="dropdown-item" href="<?= site_url('fakultas'); ?>">Fakultas</a>
                             <a class="dropdown-item" href="<?= site_url('beasiswa'); ?>">Beasiswa</a>
-                            <a class="dropdown-item" href="<?= site_url('users/ukm'); ?>">UKM</a>
+                            <a class="dropdown-item" href="<?= site_url('ukm'); ?>">UKM</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

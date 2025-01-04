@@ -17,7 +17,7 @@ class Home extends BaseController
     {
         // $this->visitorCountModel->incrementVisit('home');
         $kunjungan = $this->visitorCountModel->kunjunganHariIni('home');
-        return view('users/home', ['kun' => $kunjungan]);
+        return view('home', ['kun' => $kunjungan]);
     }
 
     public function statistik($lhalaman = null) // Berikan default null
