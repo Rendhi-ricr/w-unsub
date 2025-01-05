@@ -74,7 +74,7 @@ class Ukm extends BaseController
 
         $model->save($data);
 
-        return redirect()->to('ukm/aindex')->with('success', 'Data Unit Kegiatan Mahasiswa berhasil disimpan');
+        return redirect()->to('ukm/aindex')->with('success', 'UKM berhasil ditambahkan');
     }
 
     public function edit($id_ukm)
@@ -129,7 +129,7 @@ class Ukm extends BaseController
             'gambar' => $newName,
         ]);
 
-        return redirect()->to(base_url('ukm/aindex'))->with('success', 'Data UKM berhasil diperbarui.');
+        return redirect()->to(base_url('ukm/aindex'))->with('success', 'UKM berhasil diperbarui.');
     }
 
     public function delete($id_ukm)
@@ -146,6 +146,6 @@ class Ukm extends BaseController
         $this->ukm->delete_data($id_ukm);
 
         // mengakses halaman berita
-        return redirect()->to('ukm/aindex');
+        return redirect()->to('ukm/aindex')->with('success', 'UKM berhasil dihapus.');
     }
 }

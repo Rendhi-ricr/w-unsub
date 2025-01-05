@@ -2,7 +2,11 @@
 <?= $this->section('title') ?>Data UKM<?= $this->endSection() ?>
 <?= $this->section('content') ?>
 <div class="container-fluid p-0">
-
+    <?php if (session()->getFlashdata('success')) : ?>
+        <div class="alert alert-success fade show" role="alert">
+            <?= session()->getFlashdata('success'); ?>
+        </div>
+    <?php endif; ?>
     <div class="mb-3">
         <div class="row">
             <div class="col-md-6">
@@ -44,7 +48,7 @@
                                     <td><img src="<?= base_url('foto/UKM/' . $u['gambar']) ?>" alt="UKM" style="width: 200px; heigh:10px;"></td>
                                     <td>
                                         <a href="<?= base_url('ukm/edit/' . $u['id_ukm']) ?>" class="btn btn-warning">Edit</a>
-                                        <a href="<?= base_url('ukm/delete/' . $u['id_ukm']) ?>" class="btn btn-danger">Hapus</a>
+                                        <a href="<?= base_url('ukm/delete/' . $u['id_ukm']) ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Hapus</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

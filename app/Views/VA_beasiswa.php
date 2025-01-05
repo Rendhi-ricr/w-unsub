@@ -2,7 +2,11 @@
 <?= $this->section('title') ?>Data Beasiswa<?= $this->endSection() ?>
 <?= $this->section('content') ?>
 <div class="container-fluid p-0">
-
+    <?php if (session()->getFlashdata('success')) : ?>
+        <div class="alert alert-success fade show" role="alert">
+            <?= session()->getFlashdata('success'); ?>
+        </div>
+    <?php endif; ?>
     <div class="mb-3">
         <div class="row">
             <div class="col-md-6">
@@ -42,7 +46,7 @@
                                         <td><?= $bea['deskripsi']; ?></td>
                                         <td>
                                             <a href="<?= base_url('beasiswa/edit/' . $bea['id_beasiswa']) ?>" class="btn btn-warning">Edit</a>
-                                            <a href="<?= base_url('beasiswa/delete/' . $bea['id_beasiswa']) ?>" class="btn btn-danger">Hapus</a>
+                                            <a href="<?= base_url('beasiswa/delete/' . $bea['id_beasiswa']) ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Hapus</a>
                                         </td>
                                     </tr>
 
@@ -53,46 +57,6 @@
 
                 </div>
             </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="konfirmasiHapusData" tabindex="-1" aria-labelledby="konfirmasiHapusDataLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="konfirmasiHapusDataLabel">Hapus Data</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <span class="title-delete text-danger"></span>
-                            <p>Apakah Data Ini Akan di Hapus ?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                            <a class="btn btn-danger btn-ok">Ya, Hapus data</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="confirmModalLabel">Konfirmasi penghapusan</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Apakah Anda yakin ingin membuang data yang dipilih?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                            <button type="button" id="confirm-delete-btn" class="btn btn-danger">Ya, Hapus data</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
