@@ -219,7 +219,7 @@
     <nav class="navbar navbar-expand-lg navbar-main">
         <div class="container-fluid d-flex align-items-center">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="<?= base_url('foto/logo1.png'); ?>" alt="Logo" width="100" height="100" class="d-inline-block align-top">
+                <img src="<?= base_url('foto/logo.png'); ?>" alt="Logo" width="100" height="100" class="d-inline-block align-top">
                 <div class="logo-text">
                     <h5>Universitas Subang</h5>
                     <span>Masagi</span>

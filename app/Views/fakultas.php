@@ -1,7 +1,7 @@
 <?= $this->extend('layouts/frontend/template'); ?>
 
 <?= $this->section('title'); ?>
-Fasilitas
+Fakultas
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
@@ -14,31 +14,27 @@ Fasilitas
 
         <!-- First Row: 2 Faculties -->
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <!-- Fakultas Ilmu Administrasi -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 text-center">
                     <div class="card-body">
                         <h5 class="card-title">Fakultas Ilmu Administrasi</h5>
-                        <ul style="text-align: left;">
-                            <li><a href="https://fia.unsub.ac.id/">Administrasi Negara</a></li>
-                            <li><a href="https://fia.unsub.ac.id/">Administrasi Niaga</a></li>
-                            <li><a href="https://fia.unsub.ac.id/">Administrasi Keuangan</a></li>
-                        </ul>
+                        <a href="https://fia.unsub.ac.id/" target="_blank">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 120px;">
+                                <img src="<?= base_url('foto/fakultas/administrasi.png') ?>" alt="Logo Fakultas Ilmu Administrasi" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Fakultas Teknik -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 text-center">
                     <div class="card-body">
                         <h5 class="card-title">Fakultas Teknik</h5>
-                        <ul style="text-align: left;">
-                            <li><a href="https://teknik.unsub.ac.id/">Teknik Mesin</a></li>
-                            <li><a href="https://teknik.unsub.ac.id/">Teknik Elektro</a></li>
-                            <li><a href="https://teknik.unsub.ac.id/">Teknik Arsitektur</a></li>
-                            <li><a href="https://teknik.unsub.ac.id/">Teknik Sipil</a></li>
-                        </ul>
+                        <a href="https://teknik.unsub.ac.id/" target="_blank">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 120px;">
+                                <img src="<?= base_url('foto/fakultas/teknik.png') ?>" alt="Logo Fakultas Teknik" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -46,38 +42,39 @@ Fasilitas
 
         <!-- Second Row: 3 Faculties -->
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
-            <!-- Fakultas Hukum -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 text-center">
                     <div class="card-body">
                         <h5 class="card-title">Fakultas Hukum</h5>
-                        <ul style="text-align: left;">
-                            <li><a href="https://hukum.unsub.ac.id/">Kekhususan</a></li>
-                        </ul>
+                        <a href="https://hukum.unsub.ac.id/" target="_blank">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 120px;">
+                                <img src="<?= base_url('foto/fakultas/hukum.png') ?>" alt="Logo Fakultas Hukum" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Fakultas Ilmu Komputer -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 text-center">
                     <div class="card-body">
                         <h5 class="card-title">Fakultas Ilmu Komputer</h5>
-                        <ul style="text-align: left;">
-                            <li><a href="https://fasilkom.unsub.ac.id/">Sistem Informasi</a></li>
-                        </ul>
+                        <a href="https://fasilkom.unsub.ac.id/" target="_blank">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 120px;">
+                                <img src="<?= base_url('foto/fakultas/komputer.png') ?>" alt="Logo Fakultas Ilmu Komputer" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Fakultas Ilmu Komunikasi -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 text-center">
                     <div class="card-body">
                         <h5 class="card-title">Fakultas Ilmu Komunikasi</h5>
-                        <ul style="text-align: left;">
-                            <li><a href="https://fikom.unsub.ac.id/">Ilmu Komunikasi</a></li>
-                        </ul>
+                        <a href="https://fikom.unsub.ac.id/" target="_blank">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 120px;">
+                                <img src="<?= base_url('foto/fakultas/komunikasi.png') ?>" alt="Logo Fakultas Ilmu Komunikasi" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -85,29 +82,27 @@ Fasilitas
 
         <!-- Third Row: 2 Faculties -->
         <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-            <!-- Fakultas Agrobisnis dan Rekayasa Pertanian -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 text-center">
                     <div class="card-body">
                         <h5 class="card-title">Fakultas Agrobisnis dan Rekayasa Pertanian</h5>
-                        <ul style="text-align: left;">
-                            <li><a href="https://pertanian.unsub.ac.id/">Agroteknologi</a></li>
-                            <li><a href="https://pertanian.unsub.ac.id/">Agrobisnis</a></li>
-                        </ul>
+                        <a href="https://pertanian.unsub.ac.id/" target="_blank">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 120px;">
+                                <img src="<?= base_url('foto/fakultas/agrobisnis.png') ?>" alt="Logo Fakultas Agrobisnis dan Rekayasa Pertanian" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Fakultas Keguruan dan Ilmu Pendidikan -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 text-center">
                     <div class="card-body">
                         <h5 class="card-title">Fakultas Keguruan dan Ilmu Pendidikan</h5>
-                        <ul style="text-align: left;">
-                            <li><a href="https://fkip.unsub.ac.id/">Pendidikan Matematika</a></li>
-                            <li><a href="https://fkip.unsub.ac.id/">Pendidikan Jasmani Kesehatan dan Rekreasi</a></li>
-                            <li><a href="https://fkip.unsub.ac.id/">Pendidikan Bahasa Inggris</a></li>
-                        </ul>
+                        <a href="https://fkip.unsub.ac.id/" target="_blank">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 120px;">
+                                <img src="<?= base_url('foto/fakultas/keguruan.png') ?>" alt="Logo Fakultas Keguruan dan Ilmu Pendidikan" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
