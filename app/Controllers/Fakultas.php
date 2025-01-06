@@ -63,7 +63,7 @@ class Fakultas extends BaseController
             'link' => $this->request->getPost('link'),
         ]);
 
-        return redirect()->to('/fakultas/aindex')->with('success', 'Data berhasil disimpan!');
+        return redirect()->to('/fakultas/aindex')->with('success', 'Fakultas berhasil ditambahkan');
     }
 
 
@@ -119,7 +119,7 @@ class Fakultas extends BaseController
             'link' => $this->request->getPost('link'),
         ]);
 
-        return redirect()->to('/fakultas/aindex')->with('success', 'Data berhasil diperbarui!');
+        return redirect()->to('/fakultas/aindex')->with('success', 'Fakultas berhasil diperbarui');
     }
 
 
@@ -129,6 +129,6 @@ class Fakultas extends BaseController
         $fakultas = $this->fakultas->find($id_fakultas);
 
         $this->fakultas->delete($id_fakultas);
-        return redirect()->to('/fakultas/aindex')->with('success', 'Data berhasil dihapus!');
+        return redirect()->to('/fakultas/aindex')->with('success', 'Fakultas berhasil dihapus');
     }
 }

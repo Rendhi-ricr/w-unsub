@@ -48,7 +48,7 @@ class Beasiswa extends BaseController
             'nama_beasiswa' => $this->request->getPost('nama_beasiswa'),
             'deskripsi' => $this->request->getPost('deskripsi'),
         ]);
-        return redirect()->to('beasiswa/aindex')->with('success', 'Data beasiswa berhasil disimpan');
+        return redirect()->to('beasiswa/aindex')->with('success', 'Beasiswa berhasil Ditambahkan');
     }
 
     public function edit($id_beasiswa)
@@ -71,7 +71,7 @@ class Beasiswa extends BaseController
             'nama_beasiswa' => $this->request->getPost('nama_beasiswa'),
             'deskripsi' => $this->request->getPost('deskripsi'),
         ]);
-        return redirect()->to('beasiswa/aindex')->with('success', 'Data beasiswa berhasil diperbarui');
+        return redirect()->to('beasiswa/aindex')->with('success', 'Beasiswa berhasil diperbarui');
     }
 
     public function delete($id_beasiswa)
@@ -80,6 +80,6 @@ class Beasiswa extends BaseController
         $this->beasiswa->delete_data($id_beasiswa);
 
         // mengakses halaman berita
-        return redirect()->to('beasiswa/aindex');
+        return redirect()->to('beasiswa/aindex')->with('success', 'Beasiswa berhasil dihapus');
     }
 }

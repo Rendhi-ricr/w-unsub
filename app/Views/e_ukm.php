@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <form action="<?= base_url('admin/ukm/update/' . $u['id_ukm']) ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('ukm/update/' . $u['id_ukm']) ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field() ?>
                     <div class="card-body">
                         <div class="form-group">
