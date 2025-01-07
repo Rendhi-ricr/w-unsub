@@ -212,6 +212,9 @@
                 <a class="dropdown-item" href="https://pmb.unsub.ac.id/">PMB Unsub</a>
             </div>
         </div>
+        <div class="dropdown d-inline">
+            <?= $kun ?>
+        </div>
     </div>
 
 
@@ -243,11 +246,11 @@
                             Tentang Kami
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownTentang">
-                            <a class="dropdown-item" href="<?= site_url('users/sejarah'); ?>">Sejarah</a>
-                            <a class="dropdown-item" href="<?= site_url('users/visi_misi'); ?>">Visi & Misi</a>
-                            <a class="dropdown-item" href="<?= site_url('users/sambutan'); ?>">Sambutan Rektor</a>
-                            <a class="dropdown-item" href="<?= site_url('users/fasilitas'); ?>">Fasilitas</a>
-                            <a class="dropdown-item" href="<?= site_url('users/dokumen'); ?>">Dokumen Akreditasi</a>
+                            <a class="dropdown-item" href="<?= site_url('sejarah'); ?>">Sejarah</a>
+                            <a class="dropdown-item" href="<?= site_url('visimisi'); ?>">Visi & Misi</a>
+                            <a class="dropdown-item" href="<?= site_url('sambutan'); ?>">Sambutan Rektor</a>
+                            <a class="dropdown-item" href="<?= site_url('fasilitas'); ?>">Fasilitas</a>
+                            <a class="dropdown-item" href="<?= site_url('dokumen'); ?>">Dokumen Akreditasi</a>
                         </div>
                     </li>
 
@@ -267,8 +270,8 @@
                             Informasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownInformasi">
-                            <a class="dropdown-item" href="<?= site_url('users/berita'); ?>">Berita</a>
-                            <a class="dropdown-item" href="<?= site_url('users/agenda'); ?>">Agenda</a>
+                            <a class="dropdown-item" href="<?= site_url('berita'); ?>">Berita</a>
+                            <a class="dropdown-item" href="<?= site_url('agenda'); ?>">Agenda</a>
                         </div>
                     </li>
 

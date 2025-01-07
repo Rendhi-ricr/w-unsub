@@ -3,23 +3,26 @@
 namespace App\Controllers;
 
 use App\Models\fakultasModels;
-
+use App\Models\VisitorCountModel;
 // use App\Controllers\BaseController;
 
 class Fakultas extends BaseController
 {
-    protected $fakultas;
+    protected $fakultas, $visitorCountModel;
 
     public function __construct()
     {
         $this->fakultas = new fakultasModels();
+        $this->visitorCountModel = new VisitorCountModel();
     }
 
     public function index()
     {
+        $kunjungan = $this->visitorCountModel->kunjunganHariIni('fakultas');
         $fakultas = $this->fakultas->findAll();
         $data = [
-            'fakultas' => $fakultas
+            'fakultas' => $fakultas,
+            'kun' => $kunjungan
         ];
         return view('fakultas', $data);
     }

@@ -5,22 +5,25 @@ namespace App\Controllers;
 use App\Models\ukmModel;
 
 // use App\Controllers\BaseController;
-// use App\Models\VisitorCountModel;
+use App\Models\VisitorCountModel;
 
 class Ukm extends BaseController
 {
-    protected $ukm;
+    protected $ukm, $visitorCountModel;
 
     public function __construct()
     {
         $this->ukm = new ukmModel();
+        $this->visitorCountModel = new VisitorCountModel();
     }
 
     public function index()
     {
+        $kunjungan = $this->visitorCountModel->kunjunganHariIni('ukm');
         $ukm = $this->ukm->findAll();
         $data = [
-            'ukm' => $ukm
+            'ukm' => $ukm,
+            'kun' => $kunjungan
         ];
         return view('ukm', $data);
     }
