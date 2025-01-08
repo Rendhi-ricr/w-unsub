@@ -133,8 +133,6 @@
         <h5 class="text-primary">Tentang Kami</h5>
         <h1 class="fw-bold">Visi & Misi</h1>
     </div>
-
-    <!-- Banner -->
     <div class="bg-light-blue rounded p-4 mb-5">
         <div class="row align-items-center">
             <div class="col-md-3 text-center mb-3 mb-md-0">
@@ -147,8 +145,6 @@
                     <h4 class="fw-bold" style="font-family: 'Poppins', sans-serif; line-height: 1; color: black; font-weight: 700; font-size: 48px;">Subang</h4> <!-- Increased font size -->
                 </div>
             </div>
-
-            <!-- Tagline -->
             <div class="col-md-3 text-center">
                 <div class="vertical-line-wrapper">
                     <h5 class="text-dark" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-style: italic; font-size: 36px; white-space: nowrap;">School Of <br>Empowering People</h5>
@@ -157,16 +153,12 @@
         </div>
     </div>
 </div>
-
-    <!-- Visi Section -->
     <div class="text-center mb-5">
         <h2 class="fw-bold mx-auto" style="max-width: 600px;">Visi</h2>
         <p class="fs-5 mx-auto" style="max-width: 800px;">
             Universitas Subang Berkembang dan Berkemuka di Tingkat Jawa Barat Tahun 2023
         </p>
     </div>
-
-    <!-- Misi Section -->
     <div class="text-center mb-5">
         <h2 class="fw-bold">Misi</h2>
         <ul class="list-unstyled fs-5 mx-auto" style="max-width: 800px;">
@@ -188,18 +180,39 @@
 </div>
 </div>
     <!-- footer -->
-    <footer class="footer">
+    <footer class="bg-primary text-white py-4">
         <div class="container">
-            <div class="row">
+            <div class="row text-center text-md-start">
                 <div class="col-md-6 mb-3">
                     <h5>Kampus I</h5>
-                    <img src="<?= base_url('foto/kampus1.png');?>" alt="Kampus I" style="max-width: 300px;">
-                    <p>Jl. R.A. Kartini No. 4 Subang, Kabupaten Subang, Jawa Barat, Indonesia</p>
+                    <img src="<?= base_url('foto/kampus1.png'); ?>" alt="Kampus I" class="img-fluid" style="max-width: 300px;">
+                    <div class="d-flex align-items-center mt-3">
+                        <i class="fas fa-location-dot text-white me-3 fs-5"></i>
+                        <p class="mb-0">Jl. R.A. Kartini No. 4<br>Subang, Kabupaten Subang, Jawa Barat, Indonesia</p>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <h5>Kampus II</h5>
-                    <img src="<?= base_url('foto/kampus2.png');?>" alt="Kampus II" style="max-width: 300px;">
-                    <p>Jl. Arief Rahman Hakim No. 8, Cibogo, Kabupaten Subang, Jawa Barat, Indonesia</p>
+                <div class="col-md-6 d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h5>Kampus II</h5>
+                        <img src="<?= base_url('foto/kampus2.png'); ?>" alt="Kampus II" class="img-fluid" style="max-width: 300px;">
+                        <div class="d-flex align-items-center mt-3">
+                            <i class="fas fa-location-dot text-white me-3 fs-5"></i>
+                            <p class="mb-0">Jl. Arief Rahman Hakim No. 8,<br>Cibogo, Kabupaten Subang, Jawa Barat, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="ms-4">
+                        <h5>Hubungi kami</h5>
+                        <div class="d-flex flex-column gap-3 mt-2">
+                            <a href="#" target="_blank" class="text-white text-decoration-none d-flex align-items-center gap-2">
+                                <i class="fab fa-instagram fs-3"></i> 
+                                <span class="fs-6">universitas.subang</span>
+                            </a>
+                            <a href="#" target="_blank" class="text-white text-decoration-none d-flex align-items-center gap-2">
+                                <i class="fab fa-youtube fs-3"></i> 
+                                <span class="fs-6">universitas.subang</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
